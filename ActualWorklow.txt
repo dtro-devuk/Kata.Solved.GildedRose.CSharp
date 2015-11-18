@@ -14,3 +14,13 @@ I have decided to use BDD and TDD testing, using:
 -NUnit and RhinoMocks - (TDD)
 
 Tests for gaining code coverage, will follow a Horizontal Slice, i.e. BDD => TDD for each test.
+1.
+First set of tests are unit and are really there to test the NUnit Framework and Test Runners etc, but more importantly they
+make us aware that the access modifiers placed on the Program class (by default), do not allow the code to be tested from a different
+test project
+2.
+The unit tests from above need splitting out as test scenarios should be in seperate files, so we will split to some simple Program tests
+and then split and reuse one test method for testing the quality reduces each day.
+As I can see that their will be some common setup, I will introduce a new abstract test class to give me an AAA framework, to
+work within. The abstract class can be reused for different types of test. It can also be reused for the BDD testing.
+I want an AAA (ArrangeActAssert) framework.

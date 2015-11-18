@@ -64,7 +64,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="WhenTestTheGildedRoseProgram.cs" />
+    <Compile Include="UnitTests\Access\AndWeSetTheStockItems.cs" />
+    <Compile Include="UnitTests\Access\AndWeUpdateTheQuality.cs" />
+    <Compile Include="UnitTests\WhenTestingTheBehaviourOfSomething.cs" />
+    <Compile Include="UnitTests\WhenTestingTheGildedRoseProgram.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -80,7 +83,7 @@
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Program.Tests\" />
+    <Folder Include="UnitTests\Quality\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
