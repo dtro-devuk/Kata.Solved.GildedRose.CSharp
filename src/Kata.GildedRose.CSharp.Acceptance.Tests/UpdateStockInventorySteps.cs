@@ -1,4 +1,6 @@
-﻿using Kata.GildedRose.CSharp.Console;
+﻿using Kata.GildedRose.CSharp.Common.Testing;
+using Kata.GildedRose.CSharp.Common.Testing.Builders;
+using Kata.GildedRose.CSharp.Console;
 using NUnit.Framework;
 using System.Collections.Generic;
 using TechTalk.SpecFlow;
@@ -6,56 +8,57 @@ using TechTalk.SpecFlow;
 namespace Kata.GildedRose.CSharp.Acceptance.Tests
 {
     [Binding]
-    public class UpdateStockInventorySteps
+    public class UpdateStockInventorySteps : WhenTestingTheGildedRoseProgram
     {
-        Program GildedRoseConsole;
-        string _name = "+5 Dexterity Vest";
-        int _quality = 10;
-        int _sellin = 10;
-        
-        public void Setup()
+        protected override void Setup()
         {
-            GildedRoseConsole = new Program()
-            {
-                Items = new List<Item> { new Item { Name = _name, SellIn = _sellin, Quality = _quality } }
-            };
+            StockItemUnderTest = ItemBuilder
+            .Build
+            .WithName(ActualName)
+            .WithSellin(ActualSellinValue)
+            .WithQuality(ActualQualityValue)
+            .AnInstance();
+
+            //Create stock items to test
+            StockItemsUnderTest = new List<Item> { StockItemUnderTest };
+
+            GildedRoseConsole.Items = StockItemsUnderTest;
         }
 
         [Given(@"an item with quality of (.*)")]
         public void GivenAnItemWithQualityOf(int quality)
         {
-            _quality = quality;
+            ActualQualityValue = quality;
         }
         
         [Given(@"an item with a sell in of (.*)")]
         public void GivenAnItemWithASellInOf(int sellin)
         {
-            _sellin = sellin;
+            ActualSellinValue = sellin;
         }
         
         [Given(@"an item with the name ""(.*)""")]
         public void GivenAnItemWithTheName(string name)
         {
-            _name = name;
+            ActualName = name;
         }
         
         [When(@"the system updates the stock inventory")]
         public void WhenTheSystemUpdatesTheStockInventory()
         {
-            Setup();
-            GildedRoseConsole.UpdateQuality();
+            ArrangeAndAct();
         }
 
         [Then(@"the item should have a quality of (.*)")]
         public void ThenTheItemShouldHaveAQualityOf(int quality)
         {
-            Assert.AreEqual(GildedRoseConsole.Items[0].Quality, quality);
+            Assert.AreEqual(quality, GetFirstItemInInventory().Quality);
         }
 
         [Then(@"the item should have a sell in of (.*)")]
         public void ThenTheItemShouldHaveASellInOf(int sellin)
         {
-            Assert.AreEqual(GildedRoseConsole.Items[0].Quality, sellin);
+            Assert.AreEqual(sellin, GetFirstItemInInventory().SellIn);
         }
     }
 }
