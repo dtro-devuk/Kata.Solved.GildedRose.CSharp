@@ -67,6 +67,7 @@
     <Compile Include="UnitTests\Access\AndWeSetTheStockItems.cs" />
     <Compile Include="UnitTests\Access\AndWeUpdateTheQuality.cs" />
     <Compile Include="UnitTests\Quality\AgedBrie\AndItIncreasesInQualityWithAge.cs" />
+    <Compile Include="UnitTests\Quality\AndIsNeverMoreThan50.cs" />
     <Compile Include="UnitTests\Quality\AndItIsNeverNegative.cs" />
     <Compile Include="UnitTests\Quality\AndItReducesFasterEachDay.cs" />
     <Compile Include="UnitTests\Quality\AndItReducesEachDay.cs" />
