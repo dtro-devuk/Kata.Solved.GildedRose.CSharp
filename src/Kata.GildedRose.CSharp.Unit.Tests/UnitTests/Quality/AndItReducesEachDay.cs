@@ -1,12 +1,11 @@
-﻿using Kata.GildedRose.CSharp.Common.Testing;
-using Kata.GildedRose.CSharp.Console;
+﻿using Kata.GildedRose.CSharp.Console;
 using NUnit.Framework;
 using System.Collections.Generic;
 
 namespace Kata.GildedRose.CSharp.Unit.Tests.UnitTests.Quality
 {
     [TestFixture]
-    public class AndItReducesEachDay : WhenTestingTheGildedRoseProgram
+    public class AndItReducesEachDay : WhenTestingTheQuality
     {
         protected override void Setup()
         {
