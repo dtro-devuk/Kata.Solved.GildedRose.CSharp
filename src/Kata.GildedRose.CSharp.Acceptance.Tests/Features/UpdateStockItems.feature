@@ -10,11 +10,11 @@ Scenario: Quality reduces each day
 	When the system updates the stock inventory
 	Then the item should have a quality of 9
 
-#Scenario: Sell by date reduces each day
-#	Given an item with a sell in of 10
-#	And an item with the name "+5 Dexterity Vest"
-#	When the system updates the stock inventory
-#	Then the item should have a sell in of 9
+Scenario: Sell by date reduces each day
+	Given an item with a sell in of 10
+	And an item with the name "+5 Dexterity Vest"
+	When the system updates the stock inventory
+	Then the item should have a sell in of 9
 
 #Scenario: Quality degrades twice as fast once the sell by date has passed 
 #	Given an item with a sell in of 0 
