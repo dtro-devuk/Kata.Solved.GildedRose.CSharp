@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using Kata.GildedRose.CSharp.Domain;
+using System.Collections.Generic;
 
 namespace Kata.GildedRose.CSharp.Console
 {
@@ -109,16 +110,5 @@ namespace Kata.GildedRose.CSharp.Console
                 }
             }
         }
-
     }
-
-    public class Item
-    {
-        public string Name { get; set; }
-
-        public int SellIn { get; set; }
-
-        public int Quality { get; set; }
-    }
-
 }

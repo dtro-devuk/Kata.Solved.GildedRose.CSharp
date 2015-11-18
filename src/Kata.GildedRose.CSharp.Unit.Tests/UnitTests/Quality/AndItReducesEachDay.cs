@@ -1,4 +1,4 @@
-﻿using Kata.GildedRose.CSharp.Console;
+﻿using Kata.GildedRose.CSharp.Domain;
 using NUnit.Framework;
 using System.Collections.Generic;
 

@@ -1,5 +1,5 @@
 ﻿using NUnit.Framework;
-using Kata.GildedRose.CSharp.Console;
+using Kata.GildedRose.CSharp.Domain;
 using System.Collections.Generic;
 using Kata.GildedRose.CSharp.Common.Testing;
 using Kata.GildedRose.CSharp.Common.Testing.Builders;

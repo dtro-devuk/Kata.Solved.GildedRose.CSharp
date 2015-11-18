@@ -36,3 +36,9 @@ Having created the equuivalent unit test for Quality Reduces Each Day, which pas
 same abstract test class WhenTestingTheGildedRoseProgram, between both Acceptance and Unit Tests.
 There is would also be some use in being able to build new stock items in a common way.
 Hence we will create a common testing project, and create use a creational pattern (Builder), to help creating test stock items.
+5.
+Following all of the above tests being completed, we can now begin refactoring.
+Despite not being able to change the Item class due to the nasty goblin, we will still move the class out of the Console project into
+a new project named Domain.  This Seperation of Concerns and Single Responsibility Principle.
+We are not changing the Item signature.
+We can test the refactor with confidence now.

@@ -1,4 +1,4 @@
-﻿using Kata.GildedRose.CSharp.Console;
+﻿using Kata.GildedRose.CSharp.Domain;
 using System.Collections.Generic;
 
 namespace Kata.GildedRose.CSharp.Common.Testing.Builders

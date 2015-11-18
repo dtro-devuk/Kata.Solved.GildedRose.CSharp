@@ -1,6 +1,7 @@
 ﻿using Kata.GildedRose.CSharp.Common.Testing;
 using Kata.GildedRose.CSharp.Common.Testing.Builders;
 using Kata.GildedRose.CSharp.Console;
+using Kata.GildedRose.CSharp.Domain;
 using System.Collections.Generic;
 
 namespace Kata.GildedRose.CSharp.Unit.Tests.UnitTests.Sellin

@@ -92,6 +92,10 @@
       <Project>{43894ac7-c7e1-4160-92b1-f1b88f5ddad2}</Project>
       <Name>Kata.GildedRose.CSharp.Console</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Kata.GildedRose.CSharp.Domain\Kata.GildedRose.CSharp.Domain.csproj">
+      <Project>{72e5d2bd-40d1-461a-81b0-f2d2aa66c00c}</Project>
+      <Name>Kata.GildedRose.CSharp.Domain</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
