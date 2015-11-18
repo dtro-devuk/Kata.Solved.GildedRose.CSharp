@@ -2,6 +2,7 @@
 using Kata.GildedRose.CSharp.Console;
 using System.Collections.Generic;
 using Kata.GildedRose.CSharp.Common.Testing;
+using Kata.GildedRose.CSharp.Common.Testing.Builders;
 
 namespace Kata.GildedRose.CSharp.Unit.Tests.UnitTests.Access
 {
@@ -13,7 +14,13 @@ namespace Kata.GildedRose.CSharp.Unit.Tests.UnitTests.Access
         {
             ActualSellinValue = 10;
             ActualQualityValue = 10;
-            base.Setup();
+
+            StockItemUnderTest = ItemBuilder
+                  .Build
+                  .WithName("+5 Dexterity Vest")
+                  .WithSellin(ActualSellinValue)
+                  .WithQuality(ActualQualityValue)
+                  .AnInstance();
 
             //Create stock items to test
             StockItemsUnderTest = new List<Item> { StockItemUnderTest };
