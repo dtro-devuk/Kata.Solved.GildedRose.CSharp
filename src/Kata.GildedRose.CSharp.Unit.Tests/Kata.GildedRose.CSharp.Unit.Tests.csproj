@@ -68,6 +68,7 @@
     <Compile Include="UnitTests\Access\AndWeUpdateTheQuality.cs" />
     <Compile Include="UnitTests\Quality\AndQualityReducesEachDay.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UnitTests\Sellin\AndSellInReducesEachDay.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
