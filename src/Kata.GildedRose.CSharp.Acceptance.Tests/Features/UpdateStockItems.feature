@@ -29,6 +29,18 @@ Scenario: Quality of an item is never negative
 	And an item with the name "+5 Dexterity Vest"
 	When the system updates the stock inventory
 	Then the item should have a quality of 0
+
+Scenario Outline: Quality of a listed item is never negative
+	Given an item with the name "<name>" 
+	And an item with quality of <quality>
+	And an item with a sell in of <sellin> 
+	When the system updates the stock inventory
+	Then the item should never have a quality equal to a negative value -1
+Examples: 
+| name                       | quality | sellin |
+| +5 Dexterity Vest          | 0       | 0      |
+| Aged Brie                  | 0       | 0      |
+| Sulfuras, Hand of Ragnaros | 0       | 0      |
 	
 Scenario: Aged Brie increases in quality the older it gets
 	Given an item with quality of 10
@@ -63,18 +75,7 @@ Examples:
 #	then the item should have a quality of 50
 	
 
-# Scenario Outline: Quality of a listed item is never negative
-#	Given an item with the name "<name>" 
-#	And an item with quality of <quality>
-#	And an item with a sell in of <sellin> 
-#	When the system updates the stock inventory
-#	Then the item should never have a quality equal a negative value -1
-#Examples: 
-#| name                       | quality | sellin |
-#| +5 Dexterity Vest          | 0       | 0      |
-#| Aged Brie                  | 0       | 0      |
-#| Sulfuras, Hand of Ragnaros | 0       | 0      |
-#
+
 #Scenario: Legendary items never need to be sold
 #	Given an item with the name "Sulfuras, Hand of Ragnaros" 
 #	And an item with a sell in of 10

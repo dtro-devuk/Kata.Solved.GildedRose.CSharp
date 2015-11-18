@@ -67,5 +67,11 @@ namespace Kata.GildedRose.CSharp.Acceptance.Tests
             Assert.LessOrEqual(GetFirstItemInInventory().Quality, quality);
         }
 
+        [Then(@"the item should never have a quality equal to a negative value (.*)")]
+        public void ThenTheItemShouldNeverHaveAQualityEqualToANegativeValue(int expectedQuality)
+        {
+            Assert.AreNotEqual(expectedQuality, GetFirstItemInInventory().Quality);
+        }
+
     }
 }

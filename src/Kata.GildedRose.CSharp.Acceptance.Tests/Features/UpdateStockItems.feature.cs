@@ -148,21 +148,45 @@ this.ScenarioSetup(scenarioInfo);
         }
         
         [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Quality of a listed item is never negative")]
+        [NUnit.Framework.TestCaseAttribute("+5 Dexterity Vest", "0", "0", null)]
+        [NUnit.Framework.TestCaseAttribute("Aged Brie", "0", "0", null)]
+        [NUnit.Framework.TestCaseAttribute("Sulfuras, Hand of Ragnaros", "0", "0", null)]
+        public virtual void QualityOfAListedItemIsNeverNegative(string name, string quality, string sellin, string[] exampleTags)
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Quality of a listed item is never negative", exampleTags);
+#line 33
+this.ScenarioSetup(scenarioInfo);
+#line 34
+ testRunner.Given(string.Format("an item with the name \"{0}\"", name), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 35
+ testRunner.And(string.Format("an item with quality of {0}", quality), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 36
+ testRunner.And(string.Format("an item with a sell in of {0}", sellin), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 37
+ testRunner.When("the system updates the stock inventory", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 38
+ testRunner.Then("the item should never have a quality equal to a negative value -1", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Aged Brie increases in quality the older it gets")]
         public virtual void AgedBrieIncreasesInQualityTheOlderItGets()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Aged Brie increases in quality the older it gets", ((string[])(null)));
-#line 33
+#line 45
 this.ScenarioSetup(scenarioInfo);
-#line 34
+#line 46
  testRunner.Given("an item with quality of 10", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 35
+#line 47
  testRunner.And("an item with a sell in of 10", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 36
+#line 48
  testRunner.And("an item with the name \"Aged Brie\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 37
+#line 49
  testRunner.When("the system updates the stock inventory", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 38
+#line 50
  testRunner.Then("the item should have a quality of 11", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -173,15 +197,15 @@ this.ScenarioSetup(scenarioInfo);
         public virtual void QualityOfAnItemIsNeverMoreThan50()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Quality of an item is never more than 50", ((string[])(null)));
-#line 40
+#line 52
 this.ScenarioSetup(scenarioInfo);
-#line 41
+#line 53
  testRunner.Given("an item with the name \"Aged Brie\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 42
+#line 54
  testRunner.And("an item with quality of 50", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 43
+#line 55
  testRunner.When("the system updates the stock inventory", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 44
+#line 56
  testRunner.Then("the item should have a quality of 50", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -195,17 +219,17 @@ this.ScenarioSetup(scenarioInfo);
         public virtual void QualityOfAListedItemIsNeverMoreThan50(string name, string quality, string sellin, string[] exampleTags)
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Quality of a listed item is never more than 50", exampleTags);
-#line 46
+#line 58
 this.ScenarioSetup(scenarioInfo);
-#line 47
+#line 59
  testRunner.Given(string.Format("an item with the name \"{0}\"", name), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 48
+#line 60
  testRunner.And(string.Format("an item with quality of {0}", quality), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 49
+#line 61
  testRunner.And(string.Format("an item with a sell in of {0}", sellin), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 50
+#line 62
  testRunner.When("the system updates the stock inventory", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 51
+#line 63
  testRunner.Then("the item should have a quality less than or equal to 50", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
