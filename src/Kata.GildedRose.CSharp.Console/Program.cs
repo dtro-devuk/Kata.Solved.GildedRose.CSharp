@@ -2,9 +2,9 @@
 
 namespace Kata.GildedRose.CSharp.Console
 {
-    class Program
+    public class Program
     {
-        IList<Item> Items;
+        public IList<Item> Items;
         static void Main(string[] args)
         {
             System.Console.WriteLine("OMGHAI!");
