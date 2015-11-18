@@ -16,13 +16,13 @@ Scenario: Sell by date reduces each day
 	When the system updates the stock inventory
 	Then the item should have a sell in of 9
 
-#Scenario: Quality degrades twice as fast once the sell by date has passed 
-#	Given an item with a sell in of 0 
-#	And an item with quality of 10
-#	And an item with the name "+5 Dexterity Vest"
-#	When the system updates the stock inventory
-#	Then the item should have a quality of 8
-#
+Scenario: Quality degrades twice as fast once the sell by date has passed 
+	Given an item with a sell in of 0 
+	And an item with quality of 10
+	And an item with the name "+5 Dexterity Vest"
+	When the system updates the stock inventory
+	Then the item should have a quality of 8
+
 #Scenario: Quality of an item is never negative
 #	Given an item with a sell in of 0 and a quality of 0
 #	And an item with the name "+5 Dexterity Vest"
