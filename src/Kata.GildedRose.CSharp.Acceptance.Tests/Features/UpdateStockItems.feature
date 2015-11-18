@@ -73,12 +73,12 @@ Scenario: Legendary items never decrease in quality
 	when the system updates the stock inventory
 	then the item should have a quality of 50
 
-#Scenario: Legendary items never need to be sold
-#	Given an item with the name "Sulfuras, Hand of Ragnaros" 
-#	And an item with a sell in of 10
-#	When the system updates the stock inventory
-#	Then the item should have a sell in of 10
-#	
+Scenario: Legendary items never need to be sold
+	Given an item with the name "Sulfuras, Hand of Ragnaros" 
+	And an item with a sell in of 10
+	When the system updates the stock inventory
+	Then the item should have a sell in of 10
+	
 ##Scenario: Backstage passes increase in quality each day when the concert date is far away
 ##	Given an item with the name "Backstage passes to a TAFKAL80ETC concert"
 ##	And an item with quality of 10
