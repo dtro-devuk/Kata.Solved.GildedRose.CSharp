@@ -1,0 +1,106 @@
+After reading the requirements specification and looking at the code, I decided on the following course of actions.
+
+
+
+Firstly, it's clear we have a stock inventory, and a list of stock items. 
+
+Stock needs to be placed in the inventory, stock needs to be retrieved from the Inventory, which is really an Stock Inventory or Repository.
+The Repository is the collection of stock items we have at any one time.
+
+The Program needs to apply Updates to each stock item each time it runs (daily). 
+Therefore it needs to cycle through the Inventory to apply the updates.
+
+Each day the console program needs to update the: 
+- Sellin value (No of Days to sell item by) - 
+- Quality (value of the item)
+
+At each update, a series of logical/conditional algorithms need to be applied that take into account, the attributes of the Item of stock,
+i.e. Name, Quality and Sellin values. These algorithms or rules vary according to all of these attributes.
+
+In terms of the rules for Updating an item, we can see that:
+
+Under normal circumstances
+[1], (i.e. for standard items), 
+both the sellin and quality values of an item usually decreases by a factor of 1 each day 
+(i.e. each time the UpdateQuality process is run)
+
+[2] When the sell by date has passed on an item the Quality degrades twice as fast (by a factor of -2).
+[3] The Quality can never be negative (<0), so the minimum  Quality value can only be 0 and is constant.
+
+However, there are more specialized and varied items of stock(stock) in the stock inventory where their values can either increase or decrease,
+ according to their age and popularity.
+
+[4] With some special items (cheeses like "Aged Brie"), the Quality increases with age (as the Sellin value decreases). 
+[5] In this scenario the Quality value cannot exceed 50. Hence we have a maximum Quality Value of 50 and is so far constant.
+[6] Some so called "Legendary" items ("Sulfras") do have a sell by date, hence Sellin value doesnt need to decrease, and neither does Quality
+[7] Some even more specialized stock items, lets call them Luxury items (e.g, "Backstage passes"), also increase in Quality,
+	-by a factor of 2, when they are <= 1O days and > 5 from their sell by date.
+	-by a factor of 3, when they are <= 5 days and > 0 from their sell by date.
+	-this factor drops to 0 after the sell by date is reached 0 days
+	- we must assume the sell by date of products is 0.
+
+Obvious Code Smells
+===================
+The Program in Console has no public accessors in order to carry out Testing from a seperate Test Project
+There are a whole load of conditional statements to calculate the value of sellin and quality values, according to the name of 
+the stock that need to be considered at each daily update. The code is very smelly and messy, and difficult to read.
+However, it works according to the README.md.
+
+This conditional code is BLOATING the Update function, and is clearly a CODE SMELL that needs refactoring!!!
+
+The program needs to be altered to add another specialized item "Conjured", to the stock with different / new rules.
+
+We need to be able to add a new item of stock ("Conjured" items), that follow a new set of rules.
+We need to make future updates to easy, for new items and associated update rules.
+Therefore, we may need to be able to add new stock to the stock inventory (repository), but this is not a priority.
+
+Limitations
+===========
+Due to a nasty Gobiln we need to makes sure the existing behaviour doesnt change, but we also need update process to add new items of stock,
+with new rules.
+So we cannot change the Item class or the Items property
+
+As an approach we need to do the following:
+[1]. Check code coverage of Tests - NONE
+[2]. Write tests to ensure existing behaviour is covered, as the code/behaviour is fine in production
+[3]. Best way to do this is write Acceptance Tests, and base Unit Tests off them.
+[4]. Once code is covered sufficiently, 
+[5]. Add new functionality for new rule
+[6]. Begin REFACTORING
+[6.1]. Check Clutter 
+[6.2]. Check Naming
+[6.3]. Remove Code Smells
+[6.4]. Check SOLID Principles
+[..].
+
+Rules: 
+1. Use TDD for new functionality. Add BDD where necessary (For new rule)
+2. Commit before refactoring
+3. Refactor in small chunks, (i.e. always 10 minutes from a check-in)
+4. Commit with Labels/comments at check-in for SOLID and Code Smell names ( can be used later for code reviews)
+
+Hence we need to ensure behaviour doesnt change during our refactors, but the rules can be extended (rules are open for extension).
+
+It's clear we need to REFACTOR - following the Boy Scout Principle
+We need to be able to add new conditional rules, perhaps using a Design Pattern (Strategy)
+We need to REMOVE CODE Smells:
+- Bloating
+- Switch Statements - Replace conditional with Conditional Polymorphism
+- Data class
+- Data Clumps
+
+Refactors that spring to mind for Code smells:
+-Encapsulate collection
+-Strategy Pattern
+-Introduce Parameter objects and Pass whole object
+
+Refactors for SOLID and Fowlers Principles
+-Violation of SRP
+-Violation of OCP
+-ISP
+-DIP
+
+Possibly LISKOV when performing ISP/DIP
+
+
+

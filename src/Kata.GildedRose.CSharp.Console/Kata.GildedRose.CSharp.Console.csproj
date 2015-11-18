@@ -43,6 +43,17 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include=".build\build.bat" />
+    <None Include=".build\tasks.ps1" />
+    <None Include="Solution Items\README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Solution Items\ActualWorklow.txt" />
+    <Content Include="Solution Items\MIT-LICENSE.txt" />
+    <Content Include="Solution Items\SolutionWalkthrough.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
