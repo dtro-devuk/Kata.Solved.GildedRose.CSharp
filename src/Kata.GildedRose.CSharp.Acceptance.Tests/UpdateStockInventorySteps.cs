@@ -45,11 +45,17 @@ namespace Kata.GildedRose.CSharp.Acceptance.Tests
             Setup();
             GildedRoseConsole.UpdateQuality();
         }
-        
+
         [Then(@"the item should have a quality of (.*)")]
         public void ThenTheItemShouldHaveAQualityOf(int quality)
         {
             Assert.AreEqual(GildedRoseConsole.Items[0].Quality, quality);
+        }
+
+        [Then(@"the item should have a sell in of (.*)")]
+        public void ThenTheItemShouldHaveASellInOf(int sellin)
+        {
+            Assert.AreEqual(GildedRoseConsole.Items[0].Quality, sellin);
         }
     }
 }
