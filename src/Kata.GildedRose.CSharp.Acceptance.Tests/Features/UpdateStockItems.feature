@@ -113,13 +113,13 @@ Examples:
 | 10      | 10     | 12    |
 | 10      | 5      | 13    |
 
-#Scenario: Backstage passes have no value after a concert
-#	Given an item with the name "Backstage passes to a TAFKAL80ETC concert"
-#	And an item with quality of 10
-#	And an item with a sell in of 0
-#	When the system updates the stock inventory
-#	Then the item should have a quality of 0
-#
+Scenario: Backstage passes have no value after a concert
+	Given an item with the name "Backstage passes to a TAFKAL80ETC concert"
+	And an item with quality of 10
+	And an item with a sell in of 0
+	When the system updates the stock inventory
+	Then the item should have a quality of 0
+
 ##Scenario: Conjured items degrade in quality twice as fast
 ##	Given an item with the name "Conjured water"
 ##	And an item with quality of 10 
