@@ -186,6 +186,30 @@ this.ScenarioSetup(scenarioInfo);
 #line hidden
             this.ScenarioCleanup();
         }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Quality of a listed item is never more than 50")]
+        [NUnit.Framework.TestCaseAttribute("+5 Dexterity Vest", "50", "10", null)]
+        [NUnit.Framework.TestCaseAttribute("Aged Brie", "50", "20", null)]
+        [NUnit.Framework.TestCaseAttribute("Sulfuras, Hand of Ragnaros", "50", "30", null)]
+        public virtual void QualityOfAListedItemIsNeverMoreThan50(string name, string quality, string sellin, string[] exampleTags)
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Quality of a listed item is never more than 50", exampleTags);
+#line 46
+this.ScenarioSetup(scenarioInfo);
+#line 47
+ testRunner.Given(string.Format("an item with the name \"{0}\"", name), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 48
+ testRunner.And(string.Format("an item with quality of {0}", quality), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 49
+ testRunner.And(string.Format("an item with a sell in of {0}", sellin), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 50
+ testRunner.When("the system updates the stock inventory", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 51
+ testRunner.Then("the item should have a quality less than or equal to 50", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
     }
 }
 #pragma warning restore

@@ -60,5 +60,12 @@ namespace Kata.GildedRose.CSharp.Acceptance.Tests
         {
             Assert.AreEqual(sellin, GetFirstItemInInventory().SellIn);
         }
+
+        [Then(@"the item should have a quality less than or equal to (.*)")]
+        public void ThenTheItemShouldHaveAQualityLessThanOrEqualTo(int quality)
+        {
+            Assert.LessOrEqual(GetFirstItemInInventory().Quality, quality);
+        }
+
     }
 }

@@ -35,5 +35,5 @@ namespace Kata.GildedRose.CSharp.Unit.Tests.UnitTests.Quality
 
             Assert.LessOrEqual(GetFirstItemInInventory().Quality, expectedQuality);
         }
-}
+    }
 }
