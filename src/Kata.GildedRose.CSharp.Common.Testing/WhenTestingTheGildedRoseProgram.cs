@@ -1,7 +1,7 @@
 ﻿using Kata.GildedRose.CSharp.Console;
 using System.Collections.Generic;
 
-namespace Kata.GildedRose.CSharp.Unit.Tests
+namespace Kata.GildedRose.CSharp.Common.Testing
 {
     public abstract class WhenTestingTheGildedRoseProgram : WhenTestingTheBehaviourOfSomething
     {

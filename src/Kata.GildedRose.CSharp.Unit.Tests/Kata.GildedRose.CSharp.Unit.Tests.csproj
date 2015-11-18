@@ -67,14 +67,16 @@
     <Compile Include="UnitTests\Access\AndWeSetTheStockItems.cs" />
     <Compile Include="UnitTests\Access\AndWeUpdateTheQuality.cs" />
     <Compile Include="UnitTests\Quality\AndQualityReducesEachDay.cs" />
-    <Compile Include="UnitTests\WhenTestingTheBehaviourOfSomething.cs" />
-    <Compile Include="UnitTests\WhenTestingTheGildedRoseProgram.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Kata.GildedRose.CSharp.Common.Testing\Kata.GildedRose.CSharp.Common.Testing.csproj">
+      <Project>{b1cddffc-9241-41ab-a006-c03363f6f74d}</Project>
+      <Name>Kata.GildedRose.CSharp.Common.Testing</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Kata.GildedRose.CSharp.Console\Kata.GildedRose.CSharp.Console.csproj">
       <Project>{43894ac7-c7e1-4160-92b1-f1b88f5ddad2}</Project>
       <Name>Kata.GildedRose.CSharp.Console</Name>

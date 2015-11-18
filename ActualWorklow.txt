@@ -31,3 +31,8 @@ coverage at a higher level. They cover the functionality of the application. So 
 and adding unit tests after each scenario, in a horizontal slice.
 Steps are used to build up the background code.
 The scenarios are in the Acceptance Test project in a feature file (UpdateStockItems.feature), and are in the Features folder.
+4. 
+Having created the equuivalent unit test for Quality Reduces Each Day, which passes. It is becoming clear, that we can reuse, the 
+same abstract test class WhenTestingTheGildedRoseProgram, between both Acceptance and Unit Tests.
+There is would also be some use in being able to build new stock items in a common way.
+Hence we will create a common testing project, and create use a creational pattern (Builder), to help creating test stock items.

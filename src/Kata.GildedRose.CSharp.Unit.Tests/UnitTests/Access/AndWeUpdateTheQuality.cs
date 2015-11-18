@@ -1,6 +1,7 @@
 ﻿using NUnit.Framework;
 using Kata.GildedRose.CSharp.Console;
 using System.Collections.Generic;
+using Kata.GildedRose.CSharp.Common.Testing;
 
 namespace Kata.GildedRose.CSharp.Unit.Tests.UnitTests.Access
 {

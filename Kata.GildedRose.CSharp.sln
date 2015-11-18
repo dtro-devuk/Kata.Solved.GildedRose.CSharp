@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kata.GildedRose.CSharp.Acce
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kata.GildedRose.CSharp.Unit.Tests", "src\Kata.GildedRose.CSharp.Unit.Tests\Kata.GildedRose.CSharp.Unit.Tests.csproj", "{6AB5A4FE-6A4F-4849-9952-4F225C1A942C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kata.GildedRose.CSharp.Common.Testing", "src\Kata.GildedRose.CSharp.Common.Testing\Kata.GildedRose.CSharp.Common.Testing.csproj", "{B1CDDFFC-9241-41AB-A006-C03363F6F74D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +45,10 @@ Global
 		{6AB5A4FE-6A4F-4849-9952-4F225C1A942C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6AB5A4FE-6A4F-4849-9952-4F225C1A942C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6AB5A4FE-6A4F-4849-9952-4F225C1A942C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1CDDFFC-9241-41AB-A006-C03363F6F74D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1CDDFFC-9241-41AB-A006-C03363F6F74D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1CDDFFC-9241-41AB-A006-C03363F6F74D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1CDDFFC-9241-41AB-A006-C03363F6F74D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -50,5 +56,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{20C9ADAA-80CF-42EF-81A3-7F3D2142AD4D} = {7FF7ADD4-0B36-4B88-B013-07C4D98475DB}
 		{6AB5A4FE-6A4F-4849-9952-4F225C1A942C} = {7FF7ADD4-0B36-4B88-B013-07C4D98475DB}
+		{B1CDDFFC-9241-41AB-A006-C03363F6F74D} = {7FF7ADD4-0B36-4B88-B013-07C4D98475DB}
 	EndGlobalSection
 EndGlobal
