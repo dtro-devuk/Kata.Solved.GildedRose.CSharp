@@ -66,15 +66,12 @@ Examples:
 | +5 Dexterity Vest          | 50      | 10     | 
 | Aged Brie                  | 50      | 20     | 
 | Sulfuras, Hand of Ragnaros | 50      | 30     |
- 
 
-#Scenario: legendary items never decrease in quality
-#	given an item with the name "sulfuras, hand of ragnaros" 
-#	and an item with quality of 50
-#	when the system updates the stock inventory
-#	then the item should have a quality of 50
-	
-
+Scenario: Legendary items never decrease in quality
+	given an item with the name "sulfuras, hand of ragnaros" 
+	and an item with quality of 50
+	when the system updates the stock inventory
+	then the item should have a quality of 50
 
 #Scenario: Legendary items never need to be sold
 #	Given an item with the name "Sulfuras, Hand of Ragnaros" 
