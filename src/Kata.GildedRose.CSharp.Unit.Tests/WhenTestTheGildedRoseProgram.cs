@@ -27,11 +27,13 @@ namespace Kata.GildedRose.CSharp.Unit.Tests
 
             GildedRoseProgram = new Program();
             _stockItems = new List<Item> { _actualStockItem };
+            
         }
 
         [Test]
         public void ItShouldAllowUsToSetAndRetrieveTheItemsCorrectly()
         {
+            GildedRoseProgram.Items = _stockItems;
             Assert.AreEqual(_actualStockItem, GildedRoseProgram.Items[0]);
         }
     }
