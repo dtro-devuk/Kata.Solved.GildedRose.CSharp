@@ -6,7 +6,7 @@ using System.Collections.Generic;
 namespace Kata.GildedRose.CSharp.Unit.Tests.UnitTests.Quality
 {
     [TestFixture]
-    public class AndQualityReducesEachDay : WhenTestingTheGildedRoseProgram
+    public class AndItReducesEachDay : WhenTestingTheGildedRoseProgram
     {
         protected override void Setup()
         {
