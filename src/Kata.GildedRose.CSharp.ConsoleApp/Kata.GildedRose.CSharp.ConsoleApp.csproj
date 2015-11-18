@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{43894AC7-C7E1-4160-92B1-F1B88F5DDAD2}</ProjectGuid>
+    <ProjectGuid>{A0063572-5903-4378-9EB8-A667DB6E47F5}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Kata.GildedRose.CSharp.ConsoleApp</RootNamespace>

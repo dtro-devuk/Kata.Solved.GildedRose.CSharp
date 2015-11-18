@@ -1,4 +1,5 @@
 ﻿using NUnit.Framework;
+
 namespace Kata.GildedRose.CSharp.Unit.Tests
 {
     [TestFixture]
@@ -7,7 +8,7 @@ namespace Kata.GildedRose.CSharp.Unit.Tests
         [Test]
         public void ItShouldDoSomething()
         {
-            //Test case goes here
+            //Code goes here
         }
     }
 }

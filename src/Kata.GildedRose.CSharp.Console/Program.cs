@@ -122,4 +122,3 @@ namespace Kata.GildedRose.CSharp.Console
     }
 
 }
-
