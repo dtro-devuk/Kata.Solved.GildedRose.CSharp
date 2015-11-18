@@ -37,12 +37,12 @@ Scenario: Aged Brie increases in quality the older it gets
 	When the system updates the stock inventory
 	Then the item should have a quality of 11
 
-#Scenario: Quality of an item is never more than 50
-#	Given an item with the name "Aged Brie" 
-#	And an item with quality of 50
-#	When the system updates the stock inventory
-#	Then the item should have a quality of 50
-#
+Scenario: Quality of an item is never more than 50
+	Given an item with the name "Aged Brie" 
+	And an item with quality of 50
+	When the system updates the stock inventory
+	Then the item should have a quality of 50
+
 #Scenario: Legendary items never decrease in quality
 #	Given an item with the name "Sulfuras, Hand of Ragnaros" 
 #	And an item with quality of 50
