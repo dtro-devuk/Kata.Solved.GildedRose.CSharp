@@ -24,3 +24,10 @@ and then split and reuse one test method for testing the quality reduces each da
 As I can see that their will be some common setup, I will introduce a new abstract test class to give me an AAA framework, to
 work within. The abstract class can be reused for different types of test. It can also be reused for the BDD testing.
 I want an AAA (ArrangeActAssert) framework.
+3.
+Now we have access to the Program for testing, we can begin to introduce the Behavioural Tests.
+These test are in a Given,That,Then syntax, and are SpecFlow Feature tests. They are Acceptance Tests and are great for giving test
+coverage at a higher level. They cover the functionality of the application. So we will begin implementing each test, one at a time,
+and adding unit tests after each scenario, in a horizontal slice.
+Steps are used to build up the background code.
+The scenarios are in the Acceptance Test project in a feature file (UpdateStockItems.feature), and are in the Features folder.

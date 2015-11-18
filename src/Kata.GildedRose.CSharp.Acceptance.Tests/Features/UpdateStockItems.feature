@@ -1,15 +1,15 @@
-﻿#Feature: Update Stock Inventory
-#	As an inn keeper
-#	I want the system to automatically update item quality and sell by dates
-#	So that I can keep track of stock items
-#
-#Scenario: Quality reduces each day
-#	Given an item with quality of 10
-#	And an item with a sell in of 10 
-#	And an item with the name "+5 Dexterity Vest"
-#	When the system updates the stock inventory
-#	Then the item should have a quality of 9
-#
+﻿Feature: Update Stock Inventory
+	As an inn keeper
+	I want the system to automatically update item quality and sell by dates
+	So that I can keep track of stock items
+
+Scenario: Quality reduces each day
+	Given an item with quality of 10
+	And an item with a sell in of 10 
+	And an item with the name "+5 Dexterity Vest"
+	When the system updates the stock inventory
+	Then the item should have a quality of 9
+
 #Scenario: Sell by date reduces each day
 #	Given an item with a sell in of 10
 #	And an item with the name "+5 Dexterity Vest"
