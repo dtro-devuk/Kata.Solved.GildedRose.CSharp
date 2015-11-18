@@ -266,66 +266,27 @@ this.ScenarioSetup(scenarioInfo);
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Backstage passes increase in quality each day when the concert date is far away")]
-        public virtual void BackstagePassesIncreaseInQualityEachDayWhenTheConcertDateIsFarAway()
+        [NUnit.Framework.DescriptionAttribute("Backstage passes increase in quality at quicker rates when the concert date appro" +
+            "aches")]
+        [NUnit.Framework.TestCaseAttribute("10", "20", "11", null)]
+        [NUnit.Framework.TestCaseAttribute("10", "10", "12", null)]
+        [NUnit.Framework.TestCaseAttribute("10", "5", "13", null)]
+        public virtual void BackstagePassesIncreaseInQualityAtQuickerRatesWhenTheConcertDateApproaches(string quality, string sellin, string value, string[] exampleTags)
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Backstage passes increase in quality each day when the concert date is far away", ((string[])(null)));
-#line 82
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Backstage passes increase in quality at quicker rates when the concert date appro" +
+                    "aches", exampleTags);
+#line 104
 this.ScenarioSetup(scenarioInfo);
-#line 83
+#line 105
  testRunner.Given("an item with the name \"Backstage passes to a TAFKAL80ETC concert\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 84
- testRunner.And("an item with quality of 10", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 85
- testRunner.And("an item with a sell in of 20", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 86
+#line 106
+ testRunner.And(string.Format("an item with quality of {0}", quality), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 107
+ testRunner.And(string.Format("an item with a sell in of {0}", sellin), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 108
  testRunner.When("the system updates the stock inventory", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-            this.ScenarioCleanup();
-        }
-        
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Backstage passes increase in quality twice as fast when then concert date is near" +
-            "er")]
-        public virtual void BackstagePassesIncreaseInQualityTwiceAsFastWhenThenConcertDateIsNearer()
-        {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Backstage passes increase in quality twice as fast when then concert date is near" +
-                    "er", ((string[])(null)));
-#line 88
-this.ScenarioSetup(scenarioInfo);
-#line 89
- testRunner.Given("an item with the name \"Backstage passes to a TAFKAL80ETC concert\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 90
- testRunner.And("an item with quality of 10", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 91
- testRunner.And("an item with a sell in of 10", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 92
- testRunner.When("the system updates the stock inventory", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 93
- testRunner.Then("the item should have a quality of 12", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            this.ScenarioCleanup();
-        }
-        
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Backstage passes increase in quality three time as fast when the concert is very " +
-            "near")]
-        public virtual void BackstagePassesIncreaseInQualityThreeTimeAsFastWhenTheConcertIsVeryNear()
-        {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Backstage passes increase in quality three time as fast when the concert is very " +
-                    "near", ((string[])(null)));
-#line 95
-this.ScenarioSetup(scenarioInfo);
-#line 96
- testRunner.Given("an item with the name \"Backstage passes to a TAFKAL80ETC concert\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 97
- testRunner.And("an item with quality of 10", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 98
- testRunner.And("an item with a sell in of 5", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 99
- testRunner.When("the system updates the stock inventory", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 100
- testRunner.Then("the item should have a quality of 13", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 109
+ testRunner.Then(string.Format("the item should have a quality of {0}", value), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
