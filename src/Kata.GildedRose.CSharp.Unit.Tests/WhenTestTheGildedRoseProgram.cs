@@ -50,7 +50,7 @@ namespace Kata.GildedRose.CSharp.Unit.Tests
         {
             GildedRoseProgram.Items = _stockItems;
             GildedRoseProgram.UpdateQuality();
-            Assert.AreEqual(10, GildedRoseProgram.Items[0].Quality);
+            Assert.AreEqual(9, GildedRoseProgram.Items[0].Quality);
         }
     }
 }
