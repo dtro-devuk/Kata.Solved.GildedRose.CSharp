@@ -3,13 +3,15 @@ using Kata.GildedRose.CSharp.Console;
 using NUnit.Framework;
 using System.Collections.Generic;
 
-namespace Kata.GildedRose.CSharp.Unit.Tests.UnitTests.Quality
+namespace Kata.GildedRose.CSharp.Unit.Tests.UnitTests.Quality.Legends
 {
     [TestFixture]
-    public class AndIsNeverMoreThan50 : WhenTestingTheQuality
+    public class AndNeverDecreaseInQuality : WhenTestingTheQuality
     {
         protected override void Setup()
         {
+            ActualName = "Sulfuras, Hand of Ragnaros";
+
             StockItemUnderTest = ItemBuilder
                 .Build
                 .WithName(ActualName)
@@ -18,22 +20,21 @@ namespace Kata.GildedRose.CSharp.Unit.Tests.UnitTests.Quality
                 .AnInstance();
 
             StockItemsUnderTest = new List<Item> { StockItemUnderTest };
+
             GildedRoseConsole.Items = StockItemsUnderTest;
         }
 
-        [TestCase("+5 Dexterity Vest", 50, 0, 50)]
-        [TestCase("Aged Brie", 50, 0, 50)]
-        [TestCase("Sulfuras, Hand of Ragnaros", 50, 10, 50)]
-        [TestCase("Backstage passes to a TAFKAL80ETC concert", 50, 0, 50)]
-        public void ItShouldNeverBeGreaterThanTheExpectedValue(string actualName, int actualQuality, int actualSellin, int expectedQuality)
+        [TestCase(50, 0, 50)]
+        [TestCase(40, 10, 40)]
+        [TestCase(30, 20, 30)]
+        public void ItShouldNeverDecreaseInQuality(int actualQuality, int actualSellin, int expectedQuality)
         {
-            ActualName = actualName;
             ActualQualityValue = actualQuality;
             ActualSellinValue = actualSellin;
 
             ArrangeAndAct();
 
-            Assert.LessOrEqual(GetFirstItemInInventory().Quality, expectedQuality);
+            Assert.AreEqual(expectedQuality, GetFirstItemInInventory().Quality);
         }
-}
+    }
 }

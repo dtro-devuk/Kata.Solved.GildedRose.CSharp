@@ -72,6 +72,7 @@
     <Compile Include="UnitTests\Quality\AndItReducesFasterEachDay.cs" />
     <Compile Include="UnitTests\Quality\AndItReducesEachDay.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UnitTests\Quality\Legends\AndNeverDecreaseInQuality.cs" />
     <Compile Include="UnitTests\Quality\WhenTestingTheQuality.cs" />
     <Compile Include="UnitTests\Sellin\AndSellInReducesEachDay.cs" />
     <Compile Include="UnitTests\Sellin\WhenTestingTheSellin.cs" />
