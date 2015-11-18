@@ -30,13 +30,13 @@ Scenario: Quality of an item is never negative
 	When the system updates the stock inventory
 	Then the item should have a quality of 0
 	
-#Scenario: Aged Brie increases in quality the older it gets
-#	Given an item with quality of 10
-#	And an item with a sell in of 10 
-#	And an item with the name "Aged Brie" 
-#	When the system updates the stock inventory
-#	Then the item should have a quality of 11
-#
+Scenario: Aged Brie increases in quality the older it gets
+	Given an item with quality of 10
+	And an item with a sell in of 10 
+	And an item with the name "Aged Brie" 
+	When the system updates the stock inventory
+	Then the item should have a quality of 11
+
 #Scenario: Quality of an item is never more than 50
 #	Given an item with the name "Aged Brie" 
 #	And an item with quality of 50
