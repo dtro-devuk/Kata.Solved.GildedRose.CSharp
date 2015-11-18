@@ -79,26 +79,26 @@ Scenario: Legendary items never need to be sold
 	When the system updates the stock inventory
 	Then the item should have a sell in of 10
 	
-##Scenario: Backstage passes increase in quality each day when the concert date is far away
-##	Given an item with the name "Backstage passes to a TAFKAL80ETC concert"
-##	And an item with quality of 10
-##	And an item with a sell in of 20
-##	When the system updates the stock inventory
-##
-##Scenario: Backstage passes increase in quality twice as fast when then concert date is nearer
-##	Given an item with the name "Backstage passes to a TAFKAL80ETC concert"
-##	And an item with quality of 10
-##	And an item with a sell in of 10
-##	When the system updates the stock inventory
-##	Then the item should have a quality of 12
-##
-##Scenario: Backstage passes increase in quality three time as fast when the concert is very near
-##	Given an item with the name "Backstage passes to a TAFKAL80ETC concert"
-##	And an item with quality of 10 
-##	And an item with a sell in of 5
-##	When the system updates the stock inventory
-##	Then the item should have a quality of 13
-#
+Scenario: Backstage passes increase in quality each day when the concert date is far away
+	Given an item with the name "Backstage passes to a TAFKAL80ETC concert"
+	And an item with quality of 10
+	And an item with a sell in of 20
+	When the system updates the stock inventory
+
+Scenario: Backstage passes increase in quality twice as fast when then concert date is nearer
+	Given an item with the name "Backstage passes to a TAFKAL80ETC concert"
+	And an item with quality of 10
+	And an item with a sell in of 10
+	When the system updates the stock inventory
+	Then the item should have a quality of 12
+
+Scenario: Backstage passes increase in quality three time as fast when the concert is very near
+	Given an item with the name "Backstage passes to a TAFKAL80ETC concert"
+	And an item with quality of 10 
+	And an item with a sell in of 5
+	When the system updates the stock inventory
+	Then the item should have a quality of 13
+
 ##Above 3 tests Refactored
 #
 #Scenario Outline: Backstage passes increase in quality at quicker rates when the concert date approaches
