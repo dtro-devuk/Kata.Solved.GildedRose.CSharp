@@ -2,9 +2,9 @@
 
 namespace Kata.GildedRose.CSharp.Console
 {
-    public class StandardItemsUpdater
+    public class StandardItemsUpdater : IStockItemUpdateStrategy
     {
-        public void StandardItemsUpdate(Item item)
+        public void UpdateItem(Item item)
         {
             item.SellIn--;
             if (item.Quality > 0) item.Quality--;

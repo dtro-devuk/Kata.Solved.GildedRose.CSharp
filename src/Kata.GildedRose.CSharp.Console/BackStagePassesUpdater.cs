@@ -2,9 +2,9 @@
 
 namespace Kata.GildedRose.CSharp.Console
 {
-    public class BackStagePassesUpdater
+    public class BackStagePassesUpdateStrategy : IStockItemUpdateStrategy
     {
-        public void BackStagePassesUpdate(Item item)
+        public void UpdateItem(Item item)
         {
             item.SellIn--;
 
