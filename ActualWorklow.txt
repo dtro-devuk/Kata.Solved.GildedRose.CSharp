@@ -42,3 +42,8 @@ Despite not being able to change the Item class due to the nasty goblin, we will
 a new project named Domain.  This Seperation of Concerns and Single Responsibility Principle.
 We are not changing the Item signature.
 We can test the refactor with confidence now.
+6.
+Refactors to Program
+1. Convert for loop to for each (var item in Items)
+2. Legendary items - remove conditionals, they don't increase/decrease in value so remove them, and use an if statement, at beginning
+of loop to jump to next iteration if (item=="Sulfuras.."")
