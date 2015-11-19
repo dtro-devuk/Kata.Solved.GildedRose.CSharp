@@ -7,7 +7,6 @@ using System.Collections.Generic;
 
 namespace Kata.GildedRose.CSharp.Unit.Tests.UnitTests.Quality
 {
-    [TestFixture]
     public abstract class WhenTestingTheQuality : WhenTestingTheBehaviourOfSomething
     {
         //Item under test
