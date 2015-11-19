@@ -51,3 +51,4 @@ of loop to jump to next iteration if (item=="Sulfuras.."")
 4. Move "Back stage passes" out of previous if statement, and create a new else if, copy if (item quality < 50) statement into new condition from above
 5. Reduce space used (readability) - Change =+1 to ++ and =-1 to -- 
 6. Collapse if statements to 1 line by removing unnecessary "{" "}" 
+7. Move Sell by date decreases each day calculation up to below condition for ignoring Legendary items

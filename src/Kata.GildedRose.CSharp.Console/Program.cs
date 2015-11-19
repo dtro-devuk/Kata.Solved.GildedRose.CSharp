@@ -39,6 +39,9 @@ namespace Kata.GildedRose.CSharp.Console
             {
                 if (item.Name == "Sulfuras, Hand of Ragnaros") { continue; }
 
+                //Sell Date reduces each day
+                item.SellIn--;
+
                 if (item.Name == "Aged Brie")
                 {
                     if (item.Quality < 50) item.Quality++;
@@ -60,8 +63,6 @@ namespace Kata.GildedRose.CSharp.Console
                 {
                     if (item.Quality > 0) item.Quality--;
                 }
-
-                item.SellIn--;
 
                 if (item.SellIn < 0)
                 {
