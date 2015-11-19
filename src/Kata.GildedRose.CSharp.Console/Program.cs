@@ -66,6 +66,10 @@ namespace Kata.GildedRose.CSharp.Console
                 else
                 {
                     if (item.Quality > 0) item.Quality--;
+                    if (item.SellIn < 0)
+                    {
+                        if (item.Quality > 0) item.Quality--;
+                    }
                 }
 
                 if (item.SellIn < 0)
@@ -73,10 +77,6 @@ namespace Kata.GildedRose.CSharp.Console
                     if (item.Name == "Aged Brie")
                     {
                         if (item.Quality < 50) item.Quality++;
-                    }
-                    else
-                    {
-                        if (item.Quality > 0) item.Quality--;
                     }
                 }
             }

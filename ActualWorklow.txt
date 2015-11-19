@@ -54,4 +54,8 @@ of loop to jump to next iteration if (item=="Sulfuras.."")
 7. Move Sell by date decreases each day calculation up to below condition for ignoring Legendary items
 8. Change conditions of Backstage passes to be 10 and 5 from 11 and 6
 9. Invert if statement on items where Sell by dates have passed
-10.
+10.Move the backstage passes logic for they have no value when the sell by date is < 0.  Can be moved up into the Backstage passes conditional logic. 
+	Rational - It condenses the code and centralises the logic together.
+11. Move logic for Quality reduces each day if Sellin date is reached up to else statement in the above
+	 nested ifs (this will be rules applied for anything other than "Aged Brie", "Sulfras" and "Backstage passes", i.e. Standard items)
+12
