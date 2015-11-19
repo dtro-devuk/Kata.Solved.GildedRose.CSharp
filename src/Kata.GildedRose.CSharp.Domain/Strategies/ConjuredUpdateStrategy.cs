@@ -1,6 +1,4 @@
-﻿using Kata.GildedRose.CSharp.Domain;
-
-namespace ata.GildedRose.CSharp.Domain.Strategies
+﻿namespace Kata.GildedRose.CSharp.Domain.Strategies
 {
     public class ConjuredUpdateStrategy : IStockItemUpdateStrategy
     {

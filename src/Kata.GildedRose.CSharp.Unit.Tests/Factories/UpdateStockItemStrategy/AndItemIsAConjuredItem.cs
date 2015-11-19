@@ -1,4 +1,4 @@
-﻿using Kata.GildedRose.CSharp.Domain;
+﻿using Kata.GildedRose.CSharp.Domain.Strategies;
 using NUnit.Framework;
 
 namespace Kata.GildedRose.CSharp.Unit.Tests.Factories.UpdateStockItemStrategy

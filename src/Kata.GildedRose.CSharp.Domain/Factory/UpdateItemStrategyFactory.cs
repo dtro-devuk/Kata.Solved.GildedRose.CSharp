@@ -1,4 +1,6 @@
-﻿namespace Kata.GildedRose.CSharp.Domain.Factory
+﻿using Kata.GildedRose.CSharp.Domain.Strategies;
+
+namespace Kata.GildedRose.CSharp.Domain.Factory
 {
     public class UpdateItemStrategyFactory : IUpdateItemStrategyFactory
     {
@@ -12,6 +14,8 @@
                     return new BackStagePassesUpdateStrategy();
                 case "Sulfuras, Hand of Ragnaros":
                     return new LegendaryItemsUpdateStratgey();
+                case "Conjured Mana Cake":
+                    return new ConjuredUpdateStrategy();
                 default:
                     return new StandardItemsUpdateStrategy();
             }

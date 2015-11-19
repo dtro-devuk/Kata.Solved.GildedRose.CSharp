@@ -1,4 +1,4 @@
-﻿namespace Kata.GildedRose.CSharp.Domain
+﻿namespace Kata.GildedRose.CSharp.Domain.Strategies
 {
     public class AgedBrieUpdateStrategy : IStockItemUpdateStrategy
     {

@@ -111,3 +111,7 @@ Again this is Sepration Of Concerns and Single Responsibility Principle.
    UpdateQuality method, again SOC / SRP in SOLID. It also aids the Strategy Pattern, it helps move the logic of deciding
    which update policy to use. Removes the decision as a responsibility from the Console UpdateQuality method.
    We will do this one as TDD, AAA.
+26 Implement Factory class into the update quality method
+27 Implement Conjured Items Strategy
+28 Add Conjured items to Factory
+29 All Tests should pass from Console app

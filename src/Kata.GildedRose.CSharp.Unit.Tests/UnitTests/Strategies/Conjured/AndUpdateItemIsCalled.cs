@@ -1,5 +1,5 @@
-﻿using ata.GildedRose.CSharp.Domain.Strategies;
-using Kata.GildedRose.CSharp.Common.Testing.Builders;
+﻿using Kata.GildedRose.CSharp.Common.Testing.Builders;
+using Kata.GildedRose.CSharp.Domain.Strategies;
 
 namespace Kata.GildedRose.CSharp.Unit.Tests.UnitTests.Strategies.Conjured
 {

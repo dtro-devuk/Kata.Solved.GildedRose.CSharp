@@ -1,5 +1,5 @@
 ﻿using Kata.GildedRose.CSharp.Common.Testing.Builders;
-using Kata.GildedRose.CSharp.Domain;
+using Kata.GildedRose.CSharp.Domain.Strategies;
 
 namespace Kata.GildedRose.CSharp.Unit.Tests.UnitTests.Strategies.AgedBrie
 {
