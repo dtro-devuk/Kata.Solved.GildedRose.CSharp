@@ -54,3 +54,4 @@ of loop to jump to next iteration if (item=="Sulfuras.."")
 7. Move Sell by date decreases each day calculation up to below condition for ignoring Legendary items
 8. Change conditions of Backstage passes to be 10 and 5 from 11 and 6
 9. Invert if statement on items where Sell by dates have passed
+10.
