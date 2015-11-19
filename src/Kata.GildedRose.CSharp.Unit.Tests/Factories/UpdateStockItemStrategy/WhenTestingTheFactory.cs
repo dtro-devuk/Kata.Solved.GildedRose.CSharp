@@ -1,5 +1,4 @@
-﻿using System;
-using Kata.GildedRose.CSharp.Common.Testing;
+﻿using Kata.GildedRose.CSharp.Common.Testing;
 using Kata.GildedRose.CSharp.Domain;
 using NUnit.Framework;
 using Kata.GildedRose.CSharp.Common.Testing.Builders;
@@ -21,13 +20,14 @@ namespace Kata.GildedRose.CSharp.Unit.Tests.Factories.UpdateStockItemStrategy
 
         protected override void ArrangeAndAct()
         {
-            IUpdateItemStrategyFactory factory = new IUpdateItemStrategyFactory();
-            strategy = factory.Create(item);
+            IUpdateItemStrategyFactory factory = new UpdateItemStrategyFactory();
+            strategy = factory.Create(StockItem);
         }
 
         [Test]
-        public void ItShouldDoSomething()
+        public void ItShouldReturnTheAStrategyType()
         {
+            ArrangeAndAct();
             Assert.IsInstanceOf<IStockItemUpdateStrategy>(strategy);
         }
     }   
