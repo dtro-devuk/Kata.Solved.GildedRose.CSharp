@@ -75,3 +75,5 @@ Now we are able to extract the logic for each item into seperate methods.
 15. Refactor - Extract to Method - Aged Brie Logic
 16. Refactor - Extract to Method - Backstage passes Logic 
 17. Refactor - Extract to Method - Standard Items Logic 
+18. Refactor - Extract to Method - Legendary Items 
+19. Refactor - Create Method to update - Legendary Items - Do Nothing

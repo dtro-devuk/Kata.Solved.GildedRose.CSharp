@@ -37,7 +37,9 @@ namespace Kata.GildedRose.CSharp.Console
         {
             foreach (var item in Items)
             {
-                if (item.Name == "Sulfuras, Hand of Ragnaros") { continue; }
+                if (item.Name == "Sulfuras, Hand of Ragnaros") {
+                    LegendaryItemsUpdater(item);
+                }
 
                 if (item.Name == "Aged Brie")
                 {
@@ -52,6 +54,11 @@ namespace Kata.GildedRose.CSharp.Console
                     StandardItemsUpdater(item);
                 }
             }
+        }
+
+        protected void LegendaryItemsUpdater(Item item)
+        {
+            //Do Nothing
         }
 
         protected void StandardItemsUpdater(Item item)
