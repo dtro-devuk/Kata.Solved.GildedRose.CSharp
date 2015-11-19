@@ -5,12 +5,21 @@ namespace Kata.GildedRose.CSharp.Console
 {
     public class Program
     {
-        AgedBrieUpdater agedBrieUpdater = new AgedBrieUpdater();
-        BackStagePassesUpdater backStagepassUpdater = new BackStagePassesUpdater();
-        LegendaryItemsUpdater legendsUpdater = new LegendaryItemsUpdater();
-        StandardItemsUpdater standardUpdater = new StandardItemsUpdater();
-
         public IList<Item> Items;
+
+        AgedBrieUpdater _agedBrieUpdater;
+        BackStagePassesUpdater _backStagepassUpdater;
+        LegendaryItemsUpdater _legendsUpdater;
+        StandardItemsUpdater _standardUpdater;
+
+        public Program()
+        {
+            _agedBrieUpdater = new AgedBrieUpdater();
+            _backStagepassUpdater = new BackStagePassesUpdater();
+            _legendsUpdater = new LegendaryItemsUpdater();
+            _standardUpdater = new StandardItemsUpdater();
+        }
+
         static void Main(string[] args)
         {
             System.Console.WriteLine("OMGHAI!");
@@ -45,18 +54,18 @@ namespace Kata.GildedRose.CSharp.Console
                 switch (item.Name)
                 {
                     case "Aged Brie":
-                        agedBrieUpdater.AgedBrieUpdate(item);
+                        _agedBrieUpdater.AgedBrieUpdate(item);
                         break;
                     case "Backstage passes to a TAFKAL80ETC concert":
                         
-                        backStagepassUpdater.BackStagePassesUpdate(item);
+                        _backStagepassUpdater.BackStagePassesUpdate(item);
                         break;
                     case "Sulfuras, Hand of Ragnaros":
                         
-                        legendsUpdater.LegendaryItemsUpdate(item);
+                        _legendsUpdater.LegendaryItemsUpdate(item);
                         break;
                     default:
-                        standardUpdater.StandardItemsUpdate(item);
+                        _standardUpdater.StandardItemsUpdate(item);
                         break;
                 }
             }
