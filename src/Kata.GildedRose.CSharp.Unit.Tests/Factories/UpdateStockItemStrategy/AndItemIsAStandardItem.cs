@@ -8,13 +8,15 @@ namespace Kata.GildedRose.CSharp.Unit.Tests.Factories.UpdateStockItemStrategy
     {
         protected override void Setup()
         {
-            ActualName = "A normal item";
             base.Setup();
         }
 
-        [Test]
-        public void Factory_StandardItems_ItShouldReturnTheCorrectStrategy()
+        [TestCase("A normal item")]
+        [TestCase("+5 Dexterity Vest")]
+        [TestCase("")]
+        public void Factory_StandardItems_ItShouldReturnTheCorrectStrategy(string itemName)
         {
+            ActualName = itemName;
             ArrangeAndAct();
             Assert.IsInstanceOf<StandardItemsUpdateStrategy>(Result);
         }
