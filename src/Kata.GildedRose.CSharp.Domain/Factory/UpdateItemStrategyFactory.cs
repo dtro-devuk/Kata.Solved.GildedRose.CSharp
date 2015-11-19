@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Kata.GildedRose.CSharp.Domain.Factory
+﻿namespace Kata.GildedRose.CSharp.Domain.Factory
 {
     public class UpdateItemStrategyFactory : IUpdateItemStrategyFactory
     {
@@ -13,8 +11,7 @@ namespace Kata.GildedRose.CSharp.Domain.Factory
                 case "Backstage passes to a TAFKAL80ETC concert":
                     return new BackStagePassesUpdateStrategy();
                 case "Sulfuras, Hand of Ragnaros":
-                    throw new NotImplementedException();
-                //    return new LegendaryItemsUpdateStratgey();
+                    return new LegendaryItemsUpdateStratgey();
                 default:
                     return new StandardItemsUpdateStrategy();
             }
