@@ -25,7 +25,7 @@ namespace Kata.GildedRose.CSharp.Unit.Tests.Factories.UpdateStockItemStrategy
         }
 
         [Test]
-        public void ItShouldReturnTheAStrategyType()
+        public void Factory_ItShouldReturnTheAStrategyType()
         {
             ArrangeAndAct();
             Assert.IsInstanceOf<IStockItemUpdateStrategy>(strategy);
