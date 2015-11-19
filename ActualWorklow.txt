@@ -90,4 +90,5 @@ Now we are able to extract the logic for each item into seperate methods.
 -StandardUpdater
 
 and new then up and call the upgrade method of each in the switch statement.
+I could have opted to do this test-driven, but since I'm refactoring, then it should work. We will test drive the eventual strategies instead.
 

@@ -4,7 +4,7 @@ namespace Kata.GildedRose.CSharp.Console
 {
     public class AgedBrieUpdater
     {
-        public void AgedBrieUpdator(Item item)
+        public void AgedBrieUpdate(Item item)
         {
             item.SellIn--;
             if (item.Quality < 50) item.Quality++;

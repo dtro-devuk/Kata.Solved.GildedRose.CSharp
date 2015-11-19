@@ -41,53 +41,21 @@ namespace Kata.GildedRose.CSharp.Console
                 {
                     case "Aged Brie":
                         var updater = new AgedBrieUpdater();
-                        updater.AgedBrieUpdator(item);
+                        updater.AgedBrieUpdate(item);
                         break;
                     case "Backstage passes to a TAFKAL80ETC concert":
-                        BackStagePassesUpdater(item);
+                        var backstageUpdater = new BackStagePassesUpdater();
+                        backstageUpdater.BackStagePassesUpdate(item);
                         break;
                     case "Sulfuras, Hand of Ragnaros":
-                        LegendaryItemsUpdater(item);
+                        var legendsUpdater = new LegendaryItemsUpdater();
+                        legendsUpdater.LegendaryItemsUpdate(item);
                         break;
                     default:
-                        StandardItemsUpdater(item);
+                        var standardUpdater = new StandardItemsUpdater();
+                        standardUpdater.StandardItemsUpdate(item);
                         break;
                 }
-            }
-        }
-
-        protected void LegendaryItemsUpdater(Item item)
-        {
-            //Do Nothing
-        }
-
-        protected void StandardItemsUpdater(Item item)
-        {
-            item.SellIn--;
-            if (item.Quality > 0) item.Quality--;
-            if (item.SellIn < 0)
-            {
-                if (item.Quality > 0) item.Quality--;
-            }
-        }
-
-        protected void BackStagePassesUpdater(Item item)
-        {
-            item.SellIn--;
-
-            if (item.Quality < 50) item.Quality++;
-
-            if (item.SellIn < 10)
-            {
-                if (item.Quality < 50) item.Quality++;
-            }
-            if (item.SellIn < 5)
-            {
-                if (item.Quality < 50) item.Quality++;
-            }
-            if (item.SellIn < 0)
-            {
-                item.Quality = 0;
             }
         }
     }

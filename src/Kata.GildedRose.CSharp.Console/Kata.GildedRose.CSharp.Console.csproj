@@ -44,8 +44,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AgedBrieUpdater.cs" />
+    <Compile Include="BackStagePassesUpdater.cs" />
+    <Compile Include="LegendaryItemsUpdater.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StandardItemsUpdater.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
