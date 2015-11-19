@@ -30,12 +30,5 @@ namespace Kata.GildedRose.CSharp.Unit.Tests.Factories.UpdateStockItemStrategy
             ArrangeAndAct();
             Assert.IsInstanceOf<IStockItemUpdateStrategy>(strategy);
         }
-
-        [Test]
-        public void Factory_ItShouldReturnABackStagePassStrategy()
-        {
-            ArrangeAndAct();
-            Assert.IsInstanceOf<BackStagePassesUpdateStrategy>(strategy);
-        }
     }   
 }

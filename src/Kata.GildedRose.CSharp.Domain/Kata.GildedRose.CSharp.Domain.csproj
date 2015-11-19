@@ -41,8 +41,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Entities\Item.cs" />
-    <Compile Include="Factory\IUpdateItemStrategyFactory.cs" />
-    <Compile Include="Factory\UpdateItemStrategyFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Strategies\AgedBrieUpdateStrategy.cs" />
     <Compile Include="Strategies\BackStagePassesUpdateStrategy.cs" />
@@ -50,7 +48,9 @@
     <Compile Include="Strategies\LegendaryItemsUpdateStrategy.cs" />
     <Compile Include="Strategies\StandardItemsUpdateStrategy.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Factory\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
