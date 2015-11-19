@@ -1,5 +1,4 @@
-﻿using System;
-using Kata.GildedRose.CSharp.Domain;
+﻿using Kata.GildedRose.CSharp.Domain;
 
 namespace ata.GildedRose.CSharp.Domain.Strategies
 {
@@ -7,7 +6,11 @@ namespace ata.GildedRose.CSharp.Domain.Strategies
     {
         public void UpdateItem(Item item)
         {
-            throw new NotImplementedException();
+            item.Quality -= 2;
+            if (item.SellIn > 0)
+                item.SellIn--;
+            if (item.SellIn <= 0)
+                item.Quality -= 2;
         }
     }
 }
