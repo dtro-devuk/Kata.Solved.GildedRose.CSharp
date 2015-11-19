@@ -73,6 +73,8 @@
     <Compile Include="UnitTests\Strategies\AgedBrie\QualityIsNeverNegative.cs" />
     <Compile Include="UnitTests\Strategies\AgedBrie\SellinDecreasesEachDay.cs" />
     <Compile Include="UnitTests\Strategies\AgedBrie\QualityIncreasesEachDay.cs" />
+    <Compile Include="UnitTests\Strategies\Conjured\AndUpdateItemIsCalled.cs" />
+    <Compile Include="UnitTests\Strategies\Conjured\QualityDecreasesTwiceAsFastEachDay.cs" />
     <Compile Include="UnitTests\Strategies\WhenTestingStrategy.cs" />
     <Compile Include="UnitTests\Strategies\AgedBrie\AndUpdateItemIsCalled.cs" />
   </ItemGroup>

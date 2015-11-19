@@ -46,6 +46,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Strategies\AgedBrieUpdateStrategy.cs" />
     <Compile Include="Strategies\BackStagePassesUpdateStrategy.cs" />
+    <Compile Include="Strategies\ConjuredUpdateStrategy.cs" />
     <Compile Include="Strategies\IUpdateStockItemStrategy.cs" />
     <Compile Include="Strategies\LegendaryItemsUpdateStrategy.cs" />
     <Compile Include="Strategies\StandardItemsUpdateStrategy.cs" />
