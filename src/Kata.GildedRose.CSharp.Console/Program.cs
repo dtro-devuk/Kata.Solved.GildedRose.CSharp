@@ -49,13 +49,18 @@ namespace Kata.GildedRose.CSharp.Console
                 }
                 else
                 {
-                    item.SellIn--;
-                    if (item.Quality > 0) item.Quality--;
-                    if (item.SellIn < 0)
-                    {
-                        if (item.Quality > 0) item.Quality--;
-                    }
+                    StandardItemsUpdater(item);
                 }
+            }
+        }
+
+        protected void StandardItemsUpdater(Item item)
+        {
+            item.SellIn--;
+            if (item.Quality > 0) item.Quality--;
+            if (item.SellIn < 0)
+            {
+                if (item.Quality > 0) item.Quality--;
             }
         }
 
