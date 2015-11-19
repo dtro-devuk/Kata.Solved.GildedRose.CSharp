@@ -48,3 +48,4 @@ Refactors to Program
 2. Legendary items - remove conditionals, they don't increase/decrease in value so remove them, and use an if statement, at beginning
 of loop to jump to next iteration if (item=="Sulfuras.."")
 3. Invert if statement for "Aged Brie" and "Backstage Passes"
+4. Move "Back stage passes" out of previous if statement, and create a new else if, copy if (item quality < 50) statement into new condition from above
