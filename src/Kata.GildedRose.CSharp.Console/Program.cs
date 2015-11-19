@@ -26,7 +26,6 @@ namespace Kata.GildedRose.CSharp.Console
                             },
                         new Item {Name = "Conjured Mana Cake", SellIn = 3, Quality = 6}
                     }
-
             };
 
             app.UpdateQuality();
@@ -44,27 +43,27 @@ namespace Kata.GildedRose.CSharp.Console
                 {
                     if (item.Quality < 50)
                     {
-                        item.Quality = item.Quality + 1;
+                        item.Quality++;
                     }
                 }
                 else if (item.Name == "Backstage passes to a TAFKAL80ETC concert")
                 {
                     if (item.Quality < 50)
                     {
-                        item.Quality = item.Quality + 1;
+                        item.Quality++;
                     }
                     if (item.SellIn < 11)
                     {
                         if (item.Quality < 50)
                         {
-                            item.Quality = item.Quality + 1;
+                            item.Quality++;
                         }
                     }
                     if (item.SellIn < 6)
                     {
                         if (item.Quality < 50)
                         {
-                            item.Quality = item.Quality + 1;
+                            item.Quality++;
                         }
                     }
                 }
@@ -72,11 +71,11 @@ namespace Kata.GildedRose.CSharp.Console
                 {
                     if (item.Quality > 0)
                     {
-                        item.Quality = item.Quality - 1;
+                        item.Quality--;
                     }
                 }
 
-                item.SellIn = item.SellIn - 1;
+                item.SellIn--;
 
                 if (item.SellIn < 0)
                 {
@@ -86,7 +85,7 @@ namespace Kata.GildedRose.CSharp.Console
                         {
                             if (item.Quality > 0)
                             {
-                                item.Quality = item.Quality - 1;
+                                item.Quality--;
                             }
                         }
                         else
@@ -98,7 +97,7 @@ namespace Kata.GildedRose.CSharp.Console
                     {
                         if (item.Quality < 50)
                         {
-                            item.Quality = item.Quality + 1;
+                            item.Quality++;
                         }
                     }
                 }
