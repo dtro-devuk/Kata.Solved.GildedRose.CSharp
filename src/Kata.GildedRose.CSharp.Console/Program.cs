@@ -60,7 +60,6 @@ namespace Kata.GildedRose.CSharp.Console
                         _updateStrategy = new StandardItemsUpdateStrategy();
                         break;
                 }
-
                 _updateStrategy.UpdateItem(item);
             }
         }
