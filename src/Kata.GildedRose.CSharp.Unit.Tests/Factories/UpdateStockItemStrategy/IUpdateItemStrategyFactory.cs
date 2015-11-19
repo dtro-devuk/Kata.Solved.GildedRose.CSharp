@@ -4,6 +4,6 @@ namespace Kata.GildedRose.CSharp.Unit.Tests.Factories.UpdateStockItemStrategy
 {
     public interface IUpdateItemStrategyFactory
     {
-        IStockItemUpdateStrategy Create(Item stockItem);
+        IStockItemUpdateStrategy Create(Item item);
     }
 }

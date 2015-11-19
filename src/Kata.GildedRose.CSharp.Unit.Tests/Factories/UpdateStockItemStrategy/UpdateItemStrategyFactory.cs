@@ -4,22 +4,18 @@ namespace Kata.GildedRose.CSharp.Unit.Tests.Factories.UpdateStockItemStrategy
 {
     public class UpdateItemStrategyFactory : IUpdateItemStrategyFactory
     {
-        public IStockItemUpdateStrategy Create(Item stockItem)
+        public IStockItemUpdateStrategy Create(Item item)
         {
             switch (item.Name)
             {
                 case "Aged Brie":
-                    _updateStrategy = new AgedBrieUpdateStrategy();
-                    break;
+                    return new AgedBrieUpdateStrategy();
                 case "Backstage passes to a TAFKAL80ETC concert":
-                    _updateStrategy = new BackStagePassesUpdateStrategy();
-                    break;
+                    return new BackStagePassesUpdateStrategy();
                 case "Sulfuras, Hand of Ragnaros":
-                    _updateStrategy = new LegendaryItemsUpdateStratgey();
-                    break;
+                    return new LegendaryItemsUpdateStratgey();
                 default:
-                    _updateStrategy = new StandardItemsUpdateStrategy();
-                    break;
+                    return new StandardItemsUpdateStrategy();
             }
         }
     }
