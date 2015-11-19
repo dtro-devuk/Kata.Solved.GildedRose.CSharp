@@ -59,3 +59,4 @@ of loop to jump to next iteration if (item=="Sulfuras.."")
 11. Move logic for Quality reduces each day if Sellin date is reached up to else statement in the above
 	 nested ifs (this will be rules applied for anything other than "Aged Brie", "Sulfras" and "Backstage passes", i.e. Standard items)
 12. Remove all the remaining logic left for is Sellin < 0, as "Aged Brie" already increases Quality Each day 
+13. Move the calculation for Sellin reduces each day into each of the if statements

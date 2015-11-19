@@ -39,16 +39,17 @@ namespace Kata.GildedRose.CSharp.Console
             {
                 if (item.Name == "Sulfuras, Hand of Ragnaros") { continue; }
 
-                //Sell Date reduces each day
-                item.SellIn--;
-
                 if (item.Name == "Aged Brie")
                 {
+                    item.SellIn--;
+
                     if (item.Quality < 50) item.Quality++;
 
                 }
                 else if (item.Name == "Backstage passes to a TAFKAL80ETC concert")
                 {
+                    item.SellIn--;
+
                     if (item.Quality < 50) item.Quality++;
 
                     if (item.SellIn < 10)
@@ -66,6 +67,7 @@ namespace Kata.GildedRose.CSharp.Console
                 }
                 else
                 {
+                    item.SellIn--;
                     if (item.Quality > 0) item.Quality--;
                     if (item.SellIn < 0)
                     {
