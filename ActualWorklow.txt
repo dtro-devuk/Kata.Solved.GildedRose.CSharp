@@ -72,4 +72,5 @@ Essentially, the above refactors have clean up the conditional if statements and
 
 Now we are able to extract the logic for each item into seperate methods.
 
-15. Extract Aged Brie logic to method
+15. Refactor - Extract to Method - Aged Brie Logic
+16. Refactor - Extract to Method - Backstage passes Logic 

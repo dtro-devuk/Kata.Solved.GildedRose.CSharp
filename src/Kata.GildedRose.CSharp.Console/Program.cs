@@ -45,22 +45,7 @@ namespace Kata.GildedRose.CSharp.Console
                 }
                 else if (item.Name == "Backstage passes to a TAFKAL80ETC concert")
                 {
-                    item.SellIn--;
-
-                    if (item.Quality < 50) item.Quality++;
-
-                    if (item.SellIn < 10)
-                    {
-                        if (item.Quality < 50) item.Quality++;
-                    }
-                    if (item.SellIn < 5)
-                    {
-                        if (item.Quality < 50) item.Quality++;
-                    }
-                    if (item.SellIn < 0)
-                    {
-                        item.Quality = 0;
-                    }
+                    BackStagePassesUpdater(item);
                 }
                 else
                 {
@@ -71,6 +56,26 @@ namespace Kata.GildedRose.CSharp.Console
                         if (item.Quality > 0) item.Quality--;
                     }
                 }
+            }
+        }
+
+        protected void BackStagePassesUpdater(Item item)
+        {
+            item.SellIn--;
+
+            if (item.Quality < 50) item.Quality++;
+
+            if (item.SellIn < 10)
+            {
+                if (item.Quality < 50) item.Quality++;
+            }
+            if (item.SellIn < 5)
+            {
+                if (item.Quality < 50) item.Quality++;
+            }
+            if (item.SellIn < 0)
+            {
+                item.Quality = 0;
             }
         }
 
