@@ -47,3 +47,4 @@ Refactors to Program
 1. Convert for loop to for each (var item in Items)
 2. Legendary items - remove conditionals, they don't increase/decrease in value so remove them, and use an if statement, at beginning
 of loop to jump to next iteration if (item=="Sulfuras.."")
+3. Invert if statement for "Aged Brie" and "Backstage Passes"

@@ -32,7 +32,6 @@ namespace Kata.GildedRose.CSharp.Console
             app.UpdateQuality();
 
             System.Console.ReadKey();
-
         }
 
         public void UpdateQuality()
@@ -41,14 +40,7 @@ namespace Kata.GildedRose.CSharp.Console
             {
                 if (item.Name == "Sulfuras, Hand of Ragnaros") { continue; }
 
-                if (item.Name != "Aged Brie" && item.Name != "Backstage passes to a TAFKAL80ETC concert")
-                {
-                    if (item.Quality > 0)
-                    {
-                        item.Quality = item.Quality - 1;
-                    }
-                }
-                else
+                if (item.Name == "Aged Brie" || item.Name == "Backstage passes to a TAFKAL80ETC concert")
                 {
                     if (item.Quality < 50)
                     {
@@ -72,6 +64,13 @@ namespace Kata.GildedRose.CSharp.Console
                                 }
                             }
                         }
+                    }
+                }
+                else
+                {
+                    if (item.Quality > 0)
+                    {
+                        item.Quality = item.Quality - 1;
                     }
                 }
 
