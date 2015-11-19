@@ -105,4 +105,9 @@ Again this is Sepration Of Concerns and Single Responsibility Principle.
 	-and the algorithms are easily interchangeable
 	-hence we satisfy SOLID principles (S,O,L,and I).  We will allow principle D, though this (later)
 
-
+23 Separate Strategies from Console App => move to Domain Project, along with interface. SOC/SRP of SOLID
+24 Add Unit Tests for Aged Brie Strategy
+25 Create a Factory Class, this is a acreational pattern which allows us to move the Switch Statement out of the 
+   UpdateQuality method, again SOC / SRP in SOLID. It also aids the Strategy Pattern, it helps move the logic of deciding
+   which update policy to use. Removes the decision as a responsibility from the Console UpdateQuality method.
+   We will do this one as TDD, AAA.

@@ -1,0 +1,34 @@
+﻿using System;
+using Kata.GildedRose.CSharp.Common.Testing;
+using Kata.GildedRose.CSharp.Domain;
+using NUnit.Framework;
+using Kata.GildedRose.CSharp.Common.Testing.Builders;
+
+namespace Kata.GildedRose.CSharp.Unit.Tests.Factories.UpdateStockItemStrategy
+{
+    [TestFixture]
+    public class WhenTestingSomething : WhenTestingTheBehaviourOfSomething
+    {
+        IStockItemUpdateStrategy strategy;
+        Item StockItem;
+
+        protected override void Setup()
+        {
+            StockItem = ItemBuilder
+                .Build
+                .AnInstance();
+        }
+
+        protected override void ArrangeAndAct()
+        {
+            IUpdateItemStrategyFactory factory = new IUpdateItemStrategyFactory();
+            strategy = factory.Create(item);
+        }
+
+        [Test]
+        public void ItShouldDoSomething()
+        {
+            Assert.IsInstanceOf<IStockItemUpdateStrategy>(strategy);
+        }
+    }   
+}
