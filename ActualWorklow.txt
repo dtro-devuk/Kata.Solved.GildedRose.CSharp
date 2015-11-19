@@ -43,10 +43,11 @@ a new project named Domain.  This Seperation of Concerns and Single Responsibili
 We are not changing the Item signature.
 We can test the refactor with confidence now.
 6.
-Refactors to Program
+Refactors to Program - Update Quality for ()
 1. Convert for loop to for each (var item in Items)
 2. Legendary items - remove conditionals, they don't increase/decrease in value so remove them, and use an if statement, at beginning
 of loop to jump to next iteration if (item=="Sulfuras.."")
 3. Invert if statement for "Aged Brie" and "Backstage Passes"
 4. Move "Back stage passes" out of previous if statement, and create a new else if, copy if (item quality < 50) statement into new condition from above
 5. Reduce space used (readability) - Change =+1 to ++ and =-1 to -- 
+6. Collapse if statements to 1 line by removing unnecessary "{" "}" 

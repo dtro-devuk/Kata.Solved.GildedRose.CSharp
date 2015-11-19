@@ -41,38 +41,24 @@ namespace Kata.GildedRose.CSharp.Console
 
                 if (item.Name == "Aged Brie")
                 {
-                    if (item.Quality < 50)
-                    {
-                        item.Quality++;
-                    }
+                    if (item.Quality < 50) item.Quality++;
                 }
                 else if (item.Name == "Backstage passes to a TAFKAL80ETC concert")
                 {
-                    if (item.Quality < 50)
-                    {
-                        item.Quality++;
-                    }
+                    if (item.Quality < 50) item.Quality++;
+
                     if (item.SellIn < 11)
                     {
-                        if (item.Quality < 50)
-                        {
-                            item.Quality++;
-                        }
+                        if (item.Quality < 50) item.Quality++;
                     }
                     if (item.SellIn < 6)
                     {
-                        if (item.Quality < 50)
-                        {
-                            item.Quality++;
-                        }
+                        if (item.Quality < 50) item.Quality++;
                     }
                 }
                 else
                 {
-                    if (item.Quality > 0)
-                    {
-                        item.Quality--;
-                    }
+                    if (item.Quality > 0) item.Quality--;
                 }
 
                 item.SellIn--;
@@ -83,10 +69,7 @@ namespace Kata.GildedRose.CSharp.Console
                     {
                         if (item.Name != "Backstage passes to a TAFKAL80ETC concert")
                         {
-                            if (item.Quality > 0)
-                            {
-                                item.Quality--;
-                            }
+                            if (item.Quality > 0) item.Quality--;
                         }
                         else
                         {
@@ -95,10 +78,7 @@ namespace Kata.GildedRose.CSharp.Console
                     }
                     else
                     {
-                        if (item.Quality < 50)
-                        {
-                            item.Quality++;
-                        }
+                        if (item.Quality < 50) item.Quality++;
                     }
                 }
             }
