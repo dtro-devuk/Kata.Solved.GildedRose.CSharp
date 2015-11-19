@@ -2,9 +2,9 @@
 
 namespace Kata.GildedRose.CSharp.Console
 {
-    public class AgedBrieUpdater
+    public class AgedBrieUpdater : IStockItemUpdateStrategy
     {
-        public void AgedBrieUpdate(Item item)
+        public void UpdateItem(Item item)
         {
             item.SellIn--;
             if (item.Quality < 50) item.Quality++;

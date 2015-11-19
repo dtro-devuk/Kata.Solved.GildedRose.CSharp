@@ -92,3 +92,17 @@ Now we are able to extract the logic for each item into seperate methods.
 and new then up and call the upgrade method of each in the switch statement.
 I could have opted to do this test-driven, but since I'm refactoring, then it should work. We will test drive the eventual strategies instead.
 
+21. We exract the updates from the Switch statement and into Private Members of Program, and create a constructor to new them up.
+Again this is Sepration Of Concerns and Single Responsibility Principle.
+
+22. Next we want to Exract an Interface for the Updaters so that we can ensure each updater shares the 
+	same contract/ method signature. This is so we can move them to a strategy pattern. We are actually using the interface
+	to ensure:
+	-Composition, over Inheritance.
+	-we are using Dynamic Polymorphism rather than static
+	-we define a family of alorithms, to be selected at run time
+	-each algorithm is encapsualted
+	-and the algorithms are easily interchangeable
+	-hence we satisfy SOLID principles (S,O,L,and I).  We will allow principle D, though this (later)
+
+

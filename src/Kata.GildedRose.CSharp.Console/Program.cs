@@ -54,14 +54,12 @@ namespace Kata.GildedRose.CSharp.Console
                 switch (item.Name)
                 {
                     case "Aged Brie":
-                        _agedBrieUpdater.AgedBrieUpdate(item);
+                        _agedBrieUpdater.UpdateItem(item);
                         break;
                     case "Backstage passes to a TAFKAL80ETC concert":
-                        
                         _backStagepassUpdater.BackStagePassesUpdate(item);
                         break;
                     case "Sulfuras, Hand of Ragnaros":
-                        
                         _legendsUpdater.LegendaryItemsUpdate(item);
                         break;
                     default:

@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="AgedBrieUpdater.cs" />
     <Compile Include="BackStagePassesUpdater.cs" />
+    <Compile Include="IUpdateStockItemStrategy.cs" />
     <Compile Include="LegendaryItemsUpdater.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
