@@ -50,11 +50,11 @@ namespace Kata.GildedRose.CSharp.Console
                 {
                     if (item.Quality < 50) item.Quality++;
 
-                    if (item.SellIn < 11)
+                    if (item.SellIn < 10)
                     {
                         if (item.Quality < 50) item.Quality++;
                     }
-                    if (item.SellIn < 6)
+                    if (item.SellIn < 5)
                     {
                         if (item.Quality < 50) item.Quality++;
                     }

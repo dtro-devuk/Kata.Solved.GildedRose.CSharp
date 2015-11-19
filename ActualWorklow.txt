@@ -52,3 +52,4 @@ of loop to jump to next iteration if (item=="Sulfuras.."")
 5. Reduce space used (readability) - Change =+1 to ++ and =-1 to -- 
 6. Collapse if statements to 1 line by removing unnecessary "{" "}" 
 7. Move Sell by date decreases each day calculation up to below condition for ignoring Legendary items
+8. Change conditions of Backstage passes to be 10 and 5 from 11 and 6
