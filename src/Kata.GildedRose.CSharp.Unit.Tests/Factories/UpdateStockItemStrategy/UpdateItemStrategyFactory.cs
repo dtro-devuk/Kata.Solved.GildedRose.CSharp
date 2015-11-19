@@ -1,4 +1,5 @@
-﻿using Kata.GildedRose.CSharp.Domain;
+﻿using System;
+using Kata.GildedRose.CSharp.Domain;
 
 namespace Kata.GildedRose.CSharp.Unit.Tests.Factories.UpdateStockItemStrategy
 {
@@ -6,7 +7,7 @@ namespace Kata.GildedRose.CSharp.Unit.Tests.Factories.UpdateStockItemStrategy
     {
         public IStockItemUpdateStrategy Create(Item stockItem)
         {
-            return new AgedBrieUpdateStrategy();
+            throw new NotImplementedException();
         }
     }
 }
