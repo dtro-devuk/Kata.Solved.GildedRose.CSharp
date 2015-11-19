@@ -5,6 +5,11 @@ namespace Kata.GildedRose.CSharp.Console
 {
     public class Program
     {
+        AgedBrieUpdater agedBrieUpdater = new AgedBrieUpdater();
+        BackStagePassesUpdater backStagepassUpdater = new BackStagePassesUpdater();
+        LegendaryItemsUpdater legendsUpdater = new LegendaryItemsUpdater();
+        StandardItemsUpdater standardUpdater = new StandardItemsUpdater();
+
         public IList<Item> Items;
         static void Main(string[] args)
         {
@@ -40,19 +45,17 @@ namespace Kata.GildedRose.CSharp.Console
                 switch (item.Name)
                 {
                     case "Aged Brie":
-                        var updater = new AgedBrieUpdater();
-                        updater.AgedBrieUpdate(item);
+                        agedBrieUpdater.AgedBrieUpdate(item);
                         break;
                     case "Backstage passes to a TAFKAL80ETC concert":
-                        var backstageUpdater = new BackStagePassesUpdater();
-                        backstageUpdater.BackStagePassesUpdate(item);
+                        
+                        backStagepassUpdater.BackStagePassesUpdate(item);
                         break;
                     case "Sulfuras, Hand of Ragnaros":
-                        var legendsUpdater = new LegendaryItemsUpdater();
+                        
                         legendsUpdater.LegendaryItemsUpdate(item);
                         break;
                     default:
-                        var standardUpdater = new StandardItemsUpdater();
                         standardUpdater.StandardItemsUpdate(item);
                         break;
                 }
