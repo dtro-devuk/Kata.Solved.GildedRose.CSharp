@@ -17,8 +17,7 @@ namespace Kata.GildedRose.CSharp.Domain.Factory
                     throw new NotImplementedException();
                 //    return new LegendaryItemsUpdateStratgey();
                 default:
-                    throw new NotImplementedException();
-                    //return new StandardItemsUpdateStrategy();
+                    return new StandardItemsUpdateStrategy();
             }
         }
     }
