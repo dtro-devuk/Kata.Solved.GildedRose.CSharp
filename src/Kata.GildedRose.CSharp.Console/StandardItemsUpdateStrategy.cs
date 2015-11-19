@@ -2,7 +2,7 @@
 
 namespace Kata.GildedRose.CSharp.Console
 {
-    public class StandardItemsUpdater : IStockItemUpdateStrategy
+    public class StandardItemsUpdateStrategy : IStockItemUpdateStrategy
     {
         public void UpdateItem(Item item)
         {

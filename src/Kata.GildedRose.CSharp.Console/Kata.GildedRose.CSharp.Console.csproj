@@ -43,13 +43,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AgedBrieUpdater.cs" />
-    <Compile Include="BackStagePassesUpdater.cs" />
+    <Compile Include="AgedBrieUpdateStrategy.cs" />
+    <Compile Include="BackStagePassesUpdateStrategy.cs" />
     <Compile Include="IUpdateStockItemStrategy.cs" />
-    <Compile Include="LegendaryItemsUpdater.cs" />
+    <Compile Include="LegendaryItemsUpdateStrategy.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="StandardItemsUpdater.cs" />
+    <Compile Include="StandardItemsUpdateStrategy.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

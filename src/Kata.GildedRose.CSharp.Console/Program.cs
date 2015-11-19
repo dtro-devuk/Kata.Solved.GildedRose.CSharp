@@ -7,17 +7,11 @@ namespace Kata.GildedRose.CSharp.Console
     {
         public IList<Item> Items;
 
-        IStockItemUpdateStrategy _agedBrieUpdater;
-        IStockItemUpdateStrategy _backStagepassUpdater;
-        IStockItemUpdateStrategy _legendsUpdater;
-        IStockItemUpdateStrategy _standardUpdater;
+        IStockItemUpdateStrategy _updateStrategy;
 
         public Program()
         {
-            _agedBrieUpdater = new AgedBrieUpdateStrategy();
-            _backStagepassUpdater = new BackStagePassesUpdateStrategy();
-            _legendsUpdater = new LegendaryItemsUpdater();
-            _standardUpdater = new StandardItemsUpdater();
+
         }
 
         static void Main(string[] args)
@@ -54,18 +48,20 @@ namespace Kata.GildedRose.CSharp.Console
                 switch (item.Name)
                 {
                     case "Aged Brie":
-                        _agedBrieUpdater.UpdateItem(item);
+                        _updateStrategy = new AgedBrieUpdateStrategy();
                         break;
                     case "Backstage passes to a TAFKAL80ETC concert":
-                        _backStagepassUpdater.UpdateItem(item);
+                        _updateStrategy = new BackStagePassesUpdateStrategy();
                         break;
                     case "Sulfuras, Hand of Ragnaros":
-                        _legendsUpdater.UpdateItem(item);
+                        _updateStrategy = new LegendaryItemsUpdateStratgey();
                         break;
                     default:
-                        _standardUpdater.UpdateItem(item);
+                        _updateStrategy = new StandardItemsUpdateStrategy();
                         break;
                 }
+
+                _updateStrategy.UpdateItem(item);
             }
         }
     }
