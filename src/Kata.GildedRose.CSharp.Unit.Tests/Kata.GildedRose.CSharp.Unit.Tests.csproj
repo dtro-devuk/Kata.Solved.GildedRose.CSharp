@@ -63,6 +63,12 @@
     <Compile Include="UnitTests\Quality\WhenTestingTheQuality.cs" />
     <Compile Include="UnitTests\Sellin\AndSellInReducesEachDay.cs" />
     <Compile Include="UnitTests\Sellin\WhenTestingTheSellin.cs" />
+    <Compile Include="UnitTests\Strategies\AgedBrie\QualityIsNeverMoreThan50.cs" />
+    <Compile Include="UnitTests\Strategies\AgedBrie\QualityIsNeverNegative.cs" />
+    <Compile Include="UnitTests\Strategies\AgedBrie\SellinDecreasesEachDay.cs" />
+    <Compile Include="UnitTests\Strategies\AgedBrie\QualityIncreasesEachDay.cs" />
+    <Compile Include="UnitTests\Strategies\WhenTestingStrategy.cs" />
+    <Compile Include="UnitTests\Strategies\AgedBrie\AndUpdateItemIsCalled.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
