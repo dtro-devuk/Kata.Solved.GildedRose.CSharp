@@ -77,3 +77,17 @@ Now we are able to extract the logic for each item into seperate methods.
 17. Refactor - Extract to Method - Standard Items Logic 
 18. Refactor - Extract to Method - Legendary Items 
 19. Refactor - Create Method to update - Legendary Items - Do Nothing
+
+20. Refactor to Strategy Pattern - Step 1 
+ extract all updater methods to a set of updater classes:-
+20.1
+-AgedBrieUpdater
+20.2
+-BackstagePassesUpdater
+20.3
+-LegendaryItemsUpdater
+20.4
+-StandardUpdater
+
+and new then up and call the upgrade method of each in the switch statement.
+

@@ -40,7 +40,8 @@ namespace Kata.GildedRose.CSharp.Console
                 switch (item.Name)
                 {
                     case "Aged Brie":
-                        AgedBrieUpdator(item);
+                        var updater = new AgedBrieUpdater();
+                        updater.AgedBrieUpdator(item);
                         break;
                     case "Backstage passes to a TAFKAL80ETC concert":
                         BackStagePassesUpdater(item);
@@ -88,12 +89,6 @@ namespace Kata.GildedRose.CSharp.Console
             {
                 item.Quality = 0;
             }
-        }
-
-        protected void AgedBrieUpdator(Item item)
-        {
-            item.SellIn--;
-            if (item.Quality < 50) item.Quality++;
         }
     }
 }
