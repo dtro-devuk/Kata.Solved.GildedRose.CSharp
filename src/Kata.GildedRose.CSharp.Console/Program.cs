@@ -1,4 +1,5 @@
 ﻿using Kata.GildedRose.CSharp.Domain;
+using Kata.GildedRose.CSharp.Domain.Factory;
 using System.Collections.Generic;
 
 namespace Kata.GildedRose.CSharp.Console
@@ -7,11 +8,11 @@ namespace Kata.GildedRose.CSharp.Console
     {
         public IList<Item> Items;
 
-        IStockItemUpdateStrategy _updateStrategy;
+        IUpdateItemStrategyFactory _updateFactory;
 
         public Program()
         {
-
+            _updateFactory = new UpdateItemStrategyFactory();
         }
 
         static void Main(string[] args)
@@ -45,22 +46,8 @@ namespace Kata.GildedRose.CSharp.Console
         {
             foreach (var item in Items)
             {
-                switch (item.Name)
-                {
-                    case "Aged Brie":
-                        _updateStrategy = new AgedBrieUpdateStrategy();
-                        break;
-                    case "Backstage passes to a TAFKAL80ETC concert":
-                        _updateStrategy = new BackStagePassesUpdateStrategy();
-                        break;
-                    case "Sulfuras, Hand of Ragnaros":
-                        _updateStrategy = new LegendaryItemsUpdateStratgey();
-                        break;
-                    default:
-                        _updateStrategy = new StandardItemsUpdateStrategy();
-                        break;
-                }
-                _updateStrategy.UpdateItem(item);
+                var strategy = _updateFactory.Create(item);
+                strategy.UpdateItem(item);
             }
         }
     }
