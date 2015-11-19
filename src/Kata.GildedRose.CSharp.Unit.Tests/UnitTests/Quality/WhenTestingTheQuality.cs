@@ -2,10 +2,12 @@
 using Kata.GildedRose.CSharp.Common.Testing.Builders;
 using Kata.GildedRose.CSharp.Console;
 using Kata.GildedRose.CSharp.Domain;
+using NUnit.Framework;
 using System.Collections.Generic;
 
 namespace Kata.GildedRose.CSharp.Unit.Tests.UnitTests.Quality
 {
+    [TestFixture]
     public abstract class WhenTestingTheQuality : WhenTestingTheBehaviourOfSomething
     {
         //Item under test
