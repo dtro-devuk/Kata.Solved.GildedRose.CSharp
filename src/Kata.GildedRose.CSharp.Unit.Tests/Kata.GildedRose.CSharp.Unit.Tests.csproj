@@ -48,6 +48,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Factories\UpdateStockItemStrategy\AndItemIsABackStagePass.cs" />
     <Compile Include="Factories\UpdateStockItemStrategy\AndItemIsAStandardItem.cs" />
     <Compile Include="Factories\UpdateStockItemStrategy\AndItemIsAgedBrie.cs" />
     <Compile Include="Factories\UpdateStockItemStrategy\WhenTestingTheFactory.cs" />
