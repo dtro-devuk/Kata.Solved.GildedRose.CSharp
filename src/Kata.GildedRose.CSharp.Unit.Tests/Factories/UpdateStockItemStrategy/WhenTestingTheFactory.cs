@@ -2,6 +2,7 @@
 using Kata.GildedRose.CSharp.Domain;
 using NUnit.Framework;
 using Kata.GildedRose.CSharp.Common.Testing.Builders;
+using Kata.GildedRose.CSharp.Domain.Factory;
 
 namespace Kata.GildedRose.CSharp.Unit.Tests.Factories.UpdateStockItemStrategy
 {
