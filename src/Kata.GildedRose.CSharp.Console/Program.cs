@@ -37,21 +37,20 @@ namespace Kata.GildedRose.CSharp.Console
         {
             foreach (var item in Items)
             {
-                if (item.Name == "Sulfuras, Hand of Ragnaros") {
-                    LegendaryItemsUpdater(item);
-                }
-
-                if (item.Name == "Aged Brie")
+                switch (item.Name)
                 {
-                    AgedBrieUpdator(item);
-                }
-                else if (item.Name == "Backstage passes to a TAFKAL80ETC concert")
-                {
-                    BackStagePassesUpdater(item);
-                }
-                else
-                {
-                    StandardItemsUpdater(item);
+                    case "Aged Brie":
+                        AgedBrieUpdator(item);
+                        break;
+                    case "Backstage passes to a TAFKAL80ETC concert":
+                        BackStagePassesUpdater(item);
+                        break;
+                    case "Sulfuras, Hand of Ragnaros":
+                        LegendaryItemsUpdater(item);
+                        break;
+                    default:
+                        StandardItemsUpdater(item);
+                        break;
                 }
             }
         }
