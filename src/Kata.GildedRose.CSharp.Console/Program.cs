@@ -41,10 +41,7 @@ namespace Kata.GildedRose.CSharp.Console
 
                 if (item.Name == "Aged Brie")
                 {
-                    item.SellIn--;
-
-                    if (item.Quality < 50) item.Quality++;
-
+                    AgedBrieUpdator(item);
                 }
                 else if (item.Name == "Backstage passes to a TAFKAL80ETC concert")
                 {
@@ -75,6 +72,12 @@ namespace Kata.GildedRose.CSharp.Console
                     }
                 }
             }
+        }
+
+        protected void AgedBrieUpdator(Item item)
+        {
+            item.SellIn--;
+            if (item.Quality < 50) item.Quality++;
         }
     }
 }

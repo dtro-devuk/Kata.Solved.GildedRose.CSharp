@@ -59,4 +59,17 @@ of loop to jump to next iteration if (item=="Sulfuras.."")
 11. Move logic for Quality reduces each day if Sellin date is reached up to else statement in the above
 	 nested ifs (this will be rules applied for anything other than "Aged Brie", "Sulfras" and "Backstage passes", i.e. Standard items)
 12. Remove all the remaining logic left for is Sellin < 0, as "Aged Brie" already increases Quality Each day 
-13. Move the calculation for Sellin reduces each day into each of the if statements
+13. Move the calculation for Sellin reduces each day into each of the if statements, to get a full set of calculations 
+	for each item 
+
+Essentially, the above refactors have clean up the conditional if statements and centralised the rules to apply to 
+	each set of items.
+	We now have rules for:
+	-"Aged Brie"
+	-"Sulfuras" -Legendary items
+	-"Backstage passes"
+	-everything else - "Standard" items
+
+Now we are able to extract the logic for each item into seperate methods.
+
+15. Extract Aged Brie logic to method
