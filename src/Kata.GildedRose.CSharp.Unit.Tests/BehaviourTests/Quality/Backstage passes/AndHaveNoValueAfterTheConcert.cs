@@ -3,43 +3,37 @@ using Kata.GildedRose.CSharp.Domain;
 using NUnit.Framework;
 using System.Collections.Generic;
 
-namespace Kata.GildedRose.CSharp.Unit.Tests.UnitTests.Sellin
+namespace Kata.GildedRose.CSharp.Unit.Tests.BehaviourTests.Quality.Backstage_passes
 {
     [TestFixture]
-    public class AndSellInReducesEachDay : WhenTestingTheSellin
+    public class AndHaveNoValueAfterTheConcert : WhenTestingTheQuality
     {
         protected override void Setup()
         {
-            ActualSellinValue = 10;
+            //Sell by date 0 = sellby date passed
+
             ActualQualityValue = 10;
+            ActualSellinValue = 0;
+            ExpectedQualityValue = 0;
 
             StockItemUnderTest = ItemBuilder
                 .Build
-                .WithName("+5 Dexterity Vest")
-                .WithSellin(ActualSellinValue)
+                .WithName("Backstage passes to a TAFKAL80ETC concert")
                 .WithQuality(ActualQualityValue)
+                .WithSellin(ActualSellinValue)
                 .AnInstance();
 
             StockItemsUnderTest = new List<Item> { StockItemUnderTest };
-
             GildedRoseConsole.Items = StockItemsUnderTest;
         }
 
         [Test]
-        public void ItShouldReturnALowerValue()
-        {
-            ArrangeAndAct();
-            Assert.Less(GetFirstItemInInventory().SellIn, ActualSellinValue);
-        }
-
-        [Test]
-        public void ItShouldDecreaseByAFactorOfOne()
+        public void ItShouldReturnNoValue()
         {
             ArrangeAndAct();
 
-            var factor = ActualSellinValue - GetFirstItemInInventory().SellIn;
-
-            Assert.AreEqual(1, factor);
+            Assert.AreEqual(ExpectedQualityValue, GetFirstItemInInventory().Quality);
         }
+
     }
 }

@@ -1,4 +1,5 @@
-﻿using Kata.GildedRose.CSharp.Domain;
+﻿using Kata.GildedRose.CSharp.ConsoleApp.Ninject;
+using Kata.GildedRose.CSharp.Domain;
 using Kata.GildedRose.CSharp.Domain.Factory;
 using System.Collections.Generic;
 
@@ -6,23 +7,33 @@ namespace Kata.GildedRose.CSharp.Console
 {
     public class Program
     {
+        IUpdateItemStrategyFactory UpdateStrategyFactory { get; set; }
         public IList<Item> Items; //You can't touch this
 
-        IUpdateItemStrategyFactory _updateFactory;
-
-        public Program()
+        public Program(IUpdateItemStrategyFactory strategyFactory)
         {
-            _updateFactory = new UpdateItemStrategyFactory();
+            UpdateStrategyFactory = strategyFactory;
         }
+
+        //[Ninject.Inject]
+        //public void SetUpdateItemStrategyFactory(IUpdateItemStrategyFactory strategyFactory)
+        //{
+        //    UpdateStrategyFactory = strategyFactory;
+        //}
 
         static void Main(string[] args)
         {
             System.Console.WriteLine("OMGHAI!");
 
-            var app = new Program()
+            //Do IOC using Ninject
+            var ioc = new Ioc();
+            var updateStrategy = ioc.Resolve<IUpdateItemStrategyFactory>();
+
+            var app = new Program(updateStrategy)
             {
                 Items = GetDefaultInventory()
             };
+            //app.SetUpdateItemStrategyFactory(updateStrategy);
 
             app.UpdateQuality();
 
@@ -51,7 +62,8 @@ namespace Kata.GildedRose.CSharp.Console
         {
             foreach (var item in Items)
             {
-                var strategy = _updateFactory.Create(item);
+                System.Console.WriteLine(item.Name + " : " + item.Quality.ToString() );
+                var strategy = UpdateStrategyFactory.Create(item);
                 strategy.UpdateItem(item);
             }
         }

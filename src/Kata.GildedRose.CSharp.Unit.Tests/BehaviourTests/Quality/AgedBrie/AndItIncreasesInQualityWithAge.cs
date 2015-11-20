@@ -4,7 +4,7 @@ using NUnit.Framework;
 using System;
 using System.Collections.Generic;
 
-namespace Kata.GildedRose.CSharp.Unit.Tests.UnitTests.Quality.AgedBrie
+namespace Kata.GildedRose.CSharp.Unit.Tests.BehaviourTests.Quality.AgedBrie
 {
     [TestFixture]
     public class AndItIncreasesInQualityWithAge : WhenTestingTheQuality

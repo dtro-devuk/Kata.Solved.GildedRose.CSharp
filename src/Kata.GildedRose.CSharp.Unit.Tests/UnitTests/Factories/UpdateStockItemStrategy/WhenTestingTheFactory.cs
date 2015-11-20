@@ -4,8 +4,9 @@ using NUnit.Framework;
 using Kata.GildedRose.CSharp.Common.Testing.Builders;
 using Kata.GildedRose.CSharp.Domain.Factory;
 using Kata.GildedRose.CSharp.Domain.Strategies;
+using Rhino.Mocks;
 
-namespace Kata.GildedRose.CSharp.Unit.Tests.Factories.UpdateStockItemStrategy
+namespace Kata.GildedRose.CSharp.Unit.Tests.UnitTests.Factories.UpdateStockItemStrategy
 {
     [TestFixture]
     public abstract class WhenTestingTheFactory : WhenTestingTheBehaviourOfSomething
@@ -15,8 +16,12 @@ namespace Kata.GildedRose.CSharp.Unit.Tests.Factories.UpdateStockItemStrategy
         protected Item StockItem { get; set; }
         protected string ActualName;
 
+        protected IUpdateItemStrategyFactory MockStrategyFactory { get; set; }
+
         protected override void Setup()
         {
+            MockStrategyFactory = MockRepository.GenerateStub<IUpdateItemStrategyFactory>();
+
             StockItem = ItemBuilder
                 .Build
                 .WithName(ActualName)

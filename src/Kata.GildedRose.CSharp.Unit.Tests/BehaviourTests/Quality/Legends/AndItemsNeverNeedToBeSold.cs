@@ -3,13 +3,16 @@ using Kata.GildedRose.CSharp.Domain;
 using NUnit.Framework;
 using System.Collections.Generic;
 
-namespace Kata.GildedRose.CSharp.Unit.Tests.UnitTests.Quality.Legends
+namespace Kata.GildedRose.CSharp.Unit.Tests.BehaviourTests.Quality.Legends
 {
     [TestFixture]
-    public class AndNeverDecreaseInQuality : WhenTestingTheQuality
+    public class AndItemsNeverNeedToBeSold : WhenTestingTheQuality
     {
         protected override void Setup()
         {
+            ExpectedQualityValue = 10;
+            ActualQualityValue = 10;
+            ActualSellinValue = 10;
             ActualName = "Sulfuras, Hand of Ragnaros";
 
             StockItemUnderTest = ItemBuilder
@@ -24,17 +27,11 @@ namespace Kata.GildedRose.CSharp.Unit.Tests.UnitTests.Quality.Legends
             GildedRoseConsole.Items = StockItemsUnderTest;
         }
 
-        [TestCase(50, 0, 50)]
-        [TestCase(40, 10, 40)]
-        [TestCase(30, 20, 30)]
-        public void ItShouldNeverDecreaseInQuality(int actualQuality, int actualSellin, int expectedQuality)
+        [Test]
+        public void ItShouldAlwaysHaveTheSameValue()
         {
-            ActualQualityValue = actualQuality;
-            ActualSellinValue = actualSellin;
-
             ArrangeAndAct();
-
-            Assert.AreEqual(expectedQuality, GetFirstItemInInventory().Quality);
+            Assert.AreEqual(ExpectedQualityValue, GetFirstItemInInventory().Quality);
         }
     }
 }

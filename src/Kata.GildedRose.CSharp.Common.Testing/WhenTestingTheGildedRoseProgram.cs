@@ -1,6 +1,9 @@
 ﻿using Kata.GildedRose.CSharp.Common.Testing.Builders;
 using Kata.GildedRose.CSharp.Console;
+using Kata.GildedRose.CSharp.ConsoleApp.Ninject;
 using Kata.GildedRose.CSharp.Domain;
+using Kata.GildedRose.CSharp.Domain.Factory;
+using Rhino.Mocks;
 using System.Collections.Generic;
 
 namespace Kata.GildedRose.CSharp.Common.Testing
@@ -19,7 +22,9 @@ namespace Kata.GildedRose.CSharp.Common.Testing
 
         public WhenTestingTheGildedRoseProgram()
         {
-            GildedRoseConsole = new Program();
+            var ioc = new Ioc();
+            var updateStrategyFactory = ioc.Resolve<IUpdateItemStrategyFactory>();
+            GildedRoseConsole = new Program(updateStrategyFactory);
         }
 
         protected override void Setup()

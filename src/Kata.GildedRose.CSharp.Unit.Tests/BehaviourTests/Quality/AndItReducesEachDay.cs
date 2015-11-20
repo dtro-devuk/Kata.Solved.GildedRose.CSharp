@@ -2,7 +2,7 @@
 using NUnit.Framework;
 using System.Collections.Generic;
 
-namespace Kata.GildedRose.CSharp.Unit.Tests.UnitTests.Quality
+namespace Kata.GildedRose.CSharp.Unit.Tests.BehaviourTests.Quality
 {
     [TestFixture]
     public class AndItReducesEachDay : WhenTestingTheQuality

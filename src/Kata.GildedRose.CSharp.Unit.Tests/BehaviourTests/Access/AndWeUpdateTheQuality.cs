@@ -3,7 +3,7 @@ using Kata.GildedRose.CSharp.Domain;
 using System.Collections.Generic;
 using Kata.GildedRose.CSharp.Common.Testing;
 
-namespace Kata.GildedRose.CSharp.Unit.Tests.UnitTests.Access
+namespace Kata.GildedRose.CSharp.Unit.Tests.BehaviourTests.Access
 {
     [TestFixture]
     public class AndWeUpdateTheQuality : WhenTestingTheGildedRoseProgram

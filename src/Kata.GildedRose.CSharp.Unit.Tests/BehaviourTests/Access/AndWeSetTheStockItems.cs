@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using Kata.GildedRose.CSharp.Common.Testing;
 using Kata.GildedRose.CSharp.Common.Testing.Builders;
 
-namespace Kata.GildedRose.CSharp.Unit.Tests.UnitTests.Access
+namespace Kata.GildedRose.CSharp.Unit.Tests.BehaviourTests.Access
 {
     [TestFixture]
     public class AndWeSetTheStockItems : WhenTestingTheGildedRoseProgram

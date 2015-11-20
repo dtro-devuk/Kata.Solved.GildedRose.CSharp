@@ -3,16 +3,16 @@ using Kata.GildedRose.CSharp.Domain;
 using NUnit.Framework;
 using System.Collections.Generic;
 
-namespace Kata.GildedRose.CSharp.Unit.Tests.UnitTests.Quality.Backstage_passes
+namespace Kata.GildedRose.CSharp.Unit.Tests.BehaviourTests.Quality
 {
     [TestFixture]
-    public class IncreaseInQualityAsSellInDateAppoaches : WhenTestingTheQuality
+    public class AndIsNeverMoreThan50 : WhenTestingTheQuality
     {
         protected override void Setup()
         {
             StockItemUnderTest = ItemBuilder
                 .Build
-                .WithName("Backstage passes to a TAFKAL80ETC concert")
+                .WithName(ActualName)
                 .WithQuality(ActualQualityValue)
                 .WithSellin(ActualSellinValue)
                 .AnInstance();
@@ -21,16 +21,19 @@ namespace Kata.GildedRose.CSharp.Unit.Tests.UnitTests.Quality.Backstage_passes
             GildedRoseConsole.Items = StockItemsUnderTest;
         }
 
-        [TestCase(10, 20, 11)]
-        [TestCase(10, 10, 12)]
-        [TestCase(10, 5, 13)]
-        public void ItShouldReturnAHigherQualityAsSellinDateLowers(int actualQuality, int actualSellin, int expectedQuality)
+        [TestCase("+5 Dexterity Vest", 50, 0, 50)]
+        [TestCase("Aged Brie", 50, 0, 50)]
+        [TestCase("Sulfuras, Hand of Ragnaros", 50, 10, 50)]
+        [TestCase("Backstage passes to a TAFKAL80ETC concert", 50, 0, 50)]
+        public void ItShouldNeverBeGreaterThanTheExpectedValue(string actualName, int actualQuality, int actualSellin, int expectedQuality)
         {
+            ActualName = actualName;
             ActualQualityValue = actualQuality;
             ActualSellinValue = actualSellin;
 
             ArrangeAndAct();
-            Assert.AreEqual(expectedQuality, GetFirstItemInInventory().Quality);
+
+            Assert.LessOrEqual(GetFirstItemInInventory().Quality, expectedQuality);
         }
-    }
+}
 }

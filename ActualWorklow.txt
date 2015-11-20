@@ -115,3 +115,21 @@ Again this is Sepration Of Concerns and Single Responsibility Principle.
 27 Implement Conjured Items Strategy
 28 Add Conjured items to Factory
 29 All Tests should pass from Console app
+
+30 Avoid violating the Dependency Inversion Principle: Using DI/IoC (The "D" in SOLID)
+
+Wired up Ninject (first time I have used it over Castle Windsor, which is my preferred IoC) for DI and IoC
+Added a Gateway Pattern, for generic IoC, in case I swap back.
+Unfortunately I am using the hand cranked constructor injection at the moment.
+In Caster I would register, and resolve implementations using installers, which allows all object mappings in assemblies to be
+resolved up front.
+
+31
+So some fixes to make, are to the unit tests, which were wrongly named at the start, they are behaviour tests.
+They were not really needed with BDD, however, they will be reused/copied/refactored for the Unit and Interaction Tests to follow.
+
+This was required in order to ged around a fail.
+
+Also some the unit tests need wiring up with IoC to pass, hence they are really Behaviour Test so folder and namespaces 
+changed accordingly. I can use these later for the basis of the Unit Tests following IoC. 
+I will create more tests for IoC using Mocks and Stubs. Possibly using RhinoMocks, or Ninject Mocks???

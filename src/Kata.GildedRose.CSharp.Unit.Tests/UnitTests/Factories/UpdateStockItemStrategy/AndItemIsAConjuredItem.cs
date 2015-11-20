@@ -1,7 +1,7 @@
 ﻿using Kata.GildedRose.CSharp.Domain.Strategies;
 using NUnit.Framework;
 
-namespace Kata.GildedRose.CSharp.Unit.Tests.Factories.UpdateStockItemStrategy
+namespace Kata.GildedRose.CSharp.Unit.Tests.UnitTests.Factories.UpdateStockItemStrategy
 {
     [TestFixture]
     public class AndItemIsAConjuredItem : WhenTestingTheFactory

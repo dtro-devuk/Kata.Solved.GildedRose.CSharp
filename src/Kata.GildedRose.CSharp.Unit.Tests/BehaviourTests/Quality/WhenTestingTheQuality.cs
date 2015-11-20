@@ -1,12 +1,15 @@
 ﻿using Kata.GildedRose.CSharp.Common.Testing;
 using Kata.GildedRose.CSharp.Common.Testing.Builders;
 using Kata.GildedRose.CSharp.Console;
+using Kata.GildedRose.CSharp.ConsoleApp.Ninject;
 using Kata.GildedRose.CSharp.Domain;
+using Kata.GildedRose.CSharp.Domain.Factory;
+using Rhino.Mocks;
 using System.Collections.Generic;
 
-namespace Kata.GildedRose.CSharp.Unit.Tests.UnitTests.Sellin
+namespace Kata.GildedRose.CSharp.Unit.Tests.BehaviourTests.Quality
 {
-    public abstract class WhenTestingTheSellin : WhenTestingTheBehaviourOfSomething
+    public abstract class WhenTestingTheQuality : WhenTestingTheBehaviourOfSomething
     {
         //Item under test
         protected Program GildedRoseConsole { get; set; }
@@ -17,10 +20,16 @@ namespace Kata.GildedRose.CSharp.Unit.Tests.UnitTests.Sellin
         protected int ActualSellinValue { get; set; }
         protected int ActualQualityValue { get; set; }
         protected int ExpectedQualityValue { get; set; }
+        
+        protected IUpdateItemStrategyFactory MockStrategyFactory { get; set; }
 
-        public WhenTestingTheSellin()
+        public WhenTestingTheQuality()
         {
-            GildedRoseConsole = new Program();
+            var ioc = new Ioc();
+            var updateStrategyFactory = ioc.Resolve<IUpdateItemStrategyFactory>();
+            GildedRoseConsole = new Program(updateStrategyFactory);
+            //GildedRoseConsole.SetUpdateItemStrategyFactory(updateStrategyFactory);
+
         }
 
         protected override void Setup()

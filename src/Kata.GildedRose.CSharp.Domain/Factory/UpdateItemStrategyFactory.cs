@@ -1,4 +1,5 @@
 ﻿using Kata.GildedRose.CSharp.Domain.Strategies;
+using System;
 
 namespace Kata.GildedRose.CSharp.Domain.Factory
 {
@@ -6,6 +7,10 @@ namespace Kata.GildedRose.CSharp.Domain.Factory
     {
         public IStockItemUpdateStrategy Create(Item item)
         {
+            if (item == null){
+                throw new ArgumentNullException(nameof(item));
+            }
+
             switch (item.Name)
             {
                 case "Aged Brie":
